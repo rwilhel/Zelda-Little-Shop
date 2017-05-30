@@ -5,10 +5,12 @@
 ### Project Planning Overview
 
 **Time Gates**
-Iteration 1:
-Iteration 2:
-Iteration 3:
-Iteration 4:
+1. Iteration 1:
+2. Iteration 2:
+  + Complete first client meeting.
+3. Iteration 3:
+4. Iteration 4:
+  + Complete second client meeting. 
 
 **Features:**
 ***Updated 30 May 17***
