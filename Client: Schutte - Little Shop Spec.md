@@ -4,6 +4,12 @@
 
 ### Project Planning Overview
 
+**Time Gates**
+Iteration 1:
+Iteration 2:
+Iteration 3:
+Iteration 4:
+
 **Features:**
 ***Updated 30 May 17***
 1. User
