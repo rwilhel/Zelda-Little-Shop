@@ -5,6 +5,7 @@
 ### Project Planning Overview
 
 **Features**
+..* User/Item CRUD functionality
 
 ### Client Specifications
 
