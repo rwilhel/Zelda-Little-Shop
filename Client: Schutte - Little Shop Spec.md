@@ -6,7 +6,7 @@
 
 **Features**
 1. User
-  * stuff
+  + Item
 
 ### Client Specifications
 
