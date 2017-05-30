@@ -4,8 +4,8 @@
 
 ### Project Planning Overview
 
-**Features**
-**Updated 30 May 17**
+**Features:**
+***Updated 30 May 17***
 1. User
   + Create User with role: Guest, User, and Admin.
   + Can add items to Cart.
@@ -13,7 +13,8 @@
   + Statistics Overview
   + Create categories.
   + Close outstanding orders.
-3. 
+
+
 
 ### Client Specifications
 
