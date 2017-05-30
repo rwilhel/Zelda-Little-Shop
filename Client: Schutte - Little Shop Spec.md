@@ -6,7 +6,8 @@
 
 **Features**
 1. User
-  + Item
+  + Create User with role: Guest, User, and Admin.
+  + Can add items to Cart.
 
 ### Client Specifications
 
