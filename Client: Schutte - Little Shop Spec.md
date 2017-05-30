@@ -6,7 +6,7 @@
 
 **Features**
 1. User
-..* User/Item CRUD functionality
+⋅⋅* User/Item CRUD functionality
 
 ### Client Specifications
 
