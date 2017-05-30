@@ -5,14 +5,14 @@
 ### Project Planning Overview
 
 **Time Gates**
-1. Iteration 1 **(30May17 - 1Jun17)**:
+1. Iteration 1 ***(30May17 - 1Jun17)***:
   + Complete Feature Tests for User Stories 1-8.
   + Complete User login/logout.
   + Complete Shopping Cart tracking.
-2. Iteration 2 **(2Jun17 - 4Jun17)**:
+2. Iteration 2 ***(2Jun17 - 4Jun17)***:
   + Complete first client meeting.
-3. Iteration 3 **(5Jun17 - 6Jun17)**:
-4. Iteration 4 **(7Jun17 - 8Jun17)**:
+3. Iteration 3 ***(5Jun17 - 6Jun17)***:
+4. Iteration 4 ***(7Jun17 - 8Jun17)***:
 
 **Features:**
 ***Updated 30 May 17***
