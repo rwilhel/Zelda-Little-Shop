@@ -6,7 +6,7 @@
 
 **Time Gates**
 1. Iteration 1 ***(30May17 - 1Jun17)***:
-  + Complete Feature Tests for User Stories 1-8.
+  + Write Feature Tests for User Stories 1-8.
   + Complete User login/logout.
   + Complete Shopping Cart tracking.
 2. Iteration 2 ***(2Jun17 - 4Jun17)***:
