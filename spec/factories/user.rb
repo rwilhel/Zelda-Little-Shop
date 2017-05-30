@@ -8,13 +8,15 @@ FactoryGirl.define do
     username
     email
     password 'password'
+    role 1
+
 
     factory :admin do
-      role 1
+      role 2
     end
 
     factory :guest do
-      role 2
+      role 0
     end
   end
 
@@ -23,10 +25,10 @@ FactoryGirl.define do
   end
 
   sequence :username do |n|
-    "Chantal #{n}"
+    "Doug #{n}"
   end
 
   sequence :email do |n|
-    "chantal#{n}@example.com"
+    "Doug#{n}@example.com"
   end
 end
