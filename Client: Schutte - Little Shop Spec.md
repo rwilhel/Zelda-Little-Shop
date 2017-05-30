@@ -6,6 +6,9 @@
 
 **Time Gates**
 1. Iteration 1:
+  + Complete Feature Tests for User Stories 1-8.
+  + Complete User login/logout.
+  + Complete Shopping Cart tracking.
 2. Iteration 2:
   + Complete first client meeting.
 3. Iteration 3:
