@@ -24,8 +24,6 @@
   + Create categories.
   + Close outstanding orders.
 
-
-
 ### Client Specifications
 
 **Meeting - 1 June 17:**
