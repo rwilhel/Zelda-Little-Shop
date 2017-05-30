@@ -4,6 +4,8 @@
 
 ### Project Planning Overview
 
+**Features**
+
 ### Client Specifications
 
-**Meeting - 1 June 17** 
+**Meeting - 1 June 17:**
