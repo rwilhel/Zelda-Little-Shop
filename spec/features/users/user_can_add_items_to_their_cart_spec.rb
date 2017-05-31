@@ -7,14 +7,14 @@ RSpec.feature "When a user adds items to their backpack" do
       description: "Healing Potion",
       price: 15)
   end
-  
+
   # scenario "a message is displayed" do
   #   visit root_path
   #   click_button "Add Item"
   #
   #   expect(page).to have_content("You now have 1 Rollerball Pen.")
   # end
-  #
+  # #
   # scenario "the message correctly increments for multiple items" do
   #   visit root_path
   #   click_button "Add Item"
