@@ -1,8 +1,8 @@
 # User Stories
 
-## Story 1: Create Wireframes for Most Important Views
+<!-- ## Story 1: Create Wireframes for Most Important Views
 
-See keynote file for wireframe
+See keynote file for wireframe -->
 
 ## Story 2: Visitor can view items
 
@@ -72,7 +72,7 @@ And that item's quantity should reflect the decrease
 And the subtotal for that item should decrease
 And the total for the cart should match that decrease
 
-## Story 8: Authenticated User
+<!-- ## Story 8: Authenticated User
 
 As a registered user
 When I visit "/"
@@ -86,9 +86,9 @@ Then my current page should be "/dashboard"
 And I should see a message in the navbar that says "Logged in as SOME_USER"
 And I should see my profile information
 And I should not see a link for "Login"
-And I should see a link for "Logout"
+And I should see a link for "Logout" -->
 
-## Story 9: New User Can Create an Account
+<!-- ## Story 9: New User Can Create an Account
 
 As a visitor
 When I visit "/"
@@ -103,7 +103,7 @@ Then my current page should be "/dashboard"
 And I should see a message in the navbar that says "Logged in as SOME_USER"
 And I should see my profile information
 And I should not see a link for "Login"
-And I should see a link for "Logout"
+And I should see a link for "Logout" -->
 
 ## Story 10: Guest User
 
@@ -115,12 +115,12 @@ After I create an account
 And I visit "/cart
 Then I should see all of the data that was there when I was not logged in
 
-## Story 11: User Can Log Out
+<!-- ## Story 11: User Can Log Out
 
 As a logged in user
 When I click "Logout"
 Then I should see see "Login"
-And I should not see "Logout"
+And I should not see "Logout" -->
 
 ## Story 12: Viewing past orders
 
