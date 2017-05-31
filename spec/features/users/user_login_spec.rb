@@ -19,33 +19,34 @@ RSpec.feature 'registered user can login' do
 
     end
 
-#     scenario "an unregistered user visits the root path" do
-#
-#       visit root_path
-#
-#       click_on "Login"
-#       fill_in "Username", with: 'Chantal'
-#       fill_in "Password", with: 'password'
-#       click_button "Login"
-#
-#
-#       expect(page).to have_content("Username or password incorrect")
-#       expect(page).not_to have_content("Welcome, Chantal!")
-#     end
-#   end
-#
-#   context 'with invalid login details' do
-#     scenario 'a registered user visits root path' do
-#       user = User.create(username: 'chantal', email: 'chantal@example.com', password: 'password')
-#
-#       visit root_path
-#
-#       click_on 'Login'
-#       fill_in 'Username', with: user.username
-#       fill_in 'Password', with: 'incorrect'
-#       click_button 'Login'
-#
-#       expect(page).to have_content("Username or password incorrect")
-#     end
+    scenario "an unregistered user visits the root path" do
+
+      visit root_path
+
+      click_on "Login"
+      fill_in "Username", with: 'Link'
+      fill_in "Password", with: 'password'
+      click_button "Login"
+
+
+      expect(page).to have_content("U gun dun goofed")
+      expect(page).to_not have_content("Welcome, Link!")
+    end
+  end
+
+  context 'with invalid login details' do
+    scenario 'a registered user visits root path' do
+      user = User.create(username: 'Link', password: 'password')
+
+      visit root_path
+
+      click_on 'Login'
+      fill_in 'Username', with: user.username
+      fill_in 'Password', with: 'incorrect'
+      click_button 'Login'
+
+      expect(page).to have_content("U gun dun goofed")
+      expect(current_path).to eq('/login')
+    end
  end
 end

@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
       flash[:success] = "Welcome, #{@user.username}!"
       redirect_to "/dashboard"
     else
+      flash[:error] = "U gun dun goofed"
       render :new
     end
   end
