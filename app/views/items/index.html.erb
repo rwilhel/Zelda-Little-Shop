@@ -1,3 +1,5 @@
 <%= @items.each do |item| %>
-  <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger" %>
+  <%= button_to "Add to Cart", cart_path(item_id: item.id), class: "btn btn-danger" %>
 <% end %>
+
+<%= link_to "Cart", cart_path %>
