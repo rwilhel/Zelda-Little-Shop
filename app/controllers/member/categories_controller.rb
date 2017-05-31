@@ -1,2 +1,2 @@
-class CategoriesController < ApplicationController
+class Member::CategoriesController < Member::BaseController
 end
