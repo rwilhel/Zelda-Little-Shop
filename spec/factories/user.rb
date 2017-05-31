@@ -7,15 +7,11 @@ FactoryGirl.define do
   factory :user do
     username
     password 'password'
-    role 1
+    role 0
 
 
     factory :admin do
-      role 2
-    end
-
-    factory :guest do
-      role 0
+      role 1
     end
   end
 
