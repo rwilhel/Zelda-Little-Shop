@@ -1,0 +1,3 @@
+<%= @items.each do |item| %>
+  <%= button_to "Add to Cart", carts_path(item_id: item.id), class: "btn btn-danger" %>
+<% end %>

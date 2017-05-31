@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   root 'sessions#show'
 
   resources :users, only: [:new, :create]
-  resources :cart
-  
+  resources :carts
+  resources :items, only: [:index, :show]
+
   namespace :admin do
     resources :categories
     resources :orders
