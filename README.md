@@ -1,24 +1,5 @@
-# README
+### Little Shop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An e-commerce site, serving the residents of Hyrule (Zelda reference) with all the best potions and equipment. Users can create an account, add and remove items from their cart, and ultimately create an order by checking out.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+The live version of the site can be found at: https://nameless-sands-53448.herokuapp.com
