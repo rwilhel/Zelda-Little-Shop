@@ -24,19 +24,19 @@ describe ' can be created' do
     end
   end
 
-#   context 'With invalid username and/or email' do
-#     scenario "A guest visits the root path" do
-#       user = create(:user)
-#
-#       visit root_path
-#
-#       click_on "Create Account"
-#       fill_in "Username", with: user.username
-#       fill_in "Email", with: 'chantal@example.com'
-#       fill_in "Password", with: 'password'
-#       click_button "Create User"
-#
-#       expect(page).to have_content("Username has already been taken")
-#     end
-#   end
+  context 'With invalid username and/or email' do
+    scenario "A guest visits the root path" do
+
+      user = create(:user)
+
+      visit root_path
+
+      click_on "Create Account"
+      fill_in "Username", with: user.username
+      fill_in "Password", with: 'password'
+      click_button "Create Account"
+
+      expect(page).to have_content("U gun dun goofed")
+    end
+  end
  end

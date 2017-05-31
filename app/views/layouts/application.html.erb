@@ -9,6 +9,12 @@
   </head>
 
   <body>
+    <%= flash[:success] %>
+    <%= flash[:error] %>
     <%= yield %>
+    <%if current_user  %>
+    Current User: <%= current_user.username%>
+    <%= link_to "Logout", logout_path, method: :delete %>
+    <%end %>
   </body>
 </html>
