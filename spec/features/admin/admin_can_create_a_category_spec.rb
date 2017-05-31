@@ -10,11 +10,11 @@ RSpec.feature 'Admin can create a category' do
       click_on 'Categories'
       click_on 'Create Category'
 
-      fill_in 'Name', with: 'Movies'
+      fill_in 'Name', with: 'potions'
       click_button 'Create Category'
 
       expect(current_path).to eq(admin_category_path(Category.first))
-      expect(page).to have_content('Movies')
+      expect(page).to have_content('potions')
     end
   end
 
