@@ -11,6 +11,8 @@
   <body>
     <%= flash[:success] %>
     <%= flash[:error] %>
+    <%= flash[:notice] %>
+    
     <%= yield %>
     <%if current_user  %>
     Current User: <%= current_user.username%>
