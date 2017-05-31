@@ -4,6 +4,18 @@ Rails.application.routes.draw do
 
   resources :users, only: [:new, :create]
 
+  namespace :admin do
+    resources :categories
+    resources :orders
+    resources :items
+  end
+
+  namespace :member do
+    resources :categories, only: [:index, :show]
+    resources :orders, only: [:new, :create, :index, :show]
+    resources :items, only: [:index, :show]
+  end
+
   get '/dashboard', to: 'dashboard#index'
 
   get '/login', to: 'sessions#new'
