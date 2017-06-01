@@ -1,5 +1,5 @@
 <h1>All Categories</h1>
+
 <% @categories.each do |category| %>
-  <%= link_to "Potions", category_path(category) %>
-  <%= link_to "Bombs", category_path(category) %>
+  <%= link_to category.name, category_path(category) %>
 <% end %>

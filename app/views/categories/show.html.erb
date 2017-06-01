@@ -1,5 +1,6 @@
 <h1>Category: <%= @category.name %></h1>
 
-<% @items.category.each do |item| %>
-  <%= item.category.name %>
+<% @items.each do |item| %>
+  <%= link_to item.name, item_path(item.id) %><br>
+
 <% end %>
