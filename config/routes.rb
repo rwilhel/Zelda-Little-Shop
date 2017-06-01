@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :items, only: [:new, :create]
   end
 
-  namespace :member do
+  namespace :patron do
     resources :orders, only: [:new, :create, :index, :show]
   end
 
