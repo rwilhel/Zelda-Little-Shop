@@ -13,5 +13,13 @@ class CartController < ApplicationController
     @cart = session[:cart]
   end
 
+  def destroy
+    @item = Item.find(params[:item_id])
+    @contents = session[:cart]
+    cart = Cart.new(@contents)
+    cart.decrease_quantity(@item.id)
+    redirect_to request.referrer
+  end
+
 
 end

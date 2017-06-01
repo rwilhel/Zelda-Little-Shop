@@ -22,4 +22,8 @@ class Cart
     @contents["#{item_id}"] += 1
   end
 
+  def decrease_quantity(item_id)
+    @contents["#{item_id}"] -= 1
+  end
+
 end

@@ -2,7 +2,7 @@
   <% item = Item.find(item)  %>
   <%= item.name  %>
   <%= item.price  %>
-  <%= button_to "-", cart_path(item_id: item.id), class: "button_minus" %>
+  <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
   <%= quantity %>
   <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
   <% end %>
