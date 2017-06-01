@@ -1,13 +1,11 @@
-<% @total = [] %>
 <% @cart.each_pair do |item, quantity|  %>
   <% item = Item.find(item)  %>
   <%= item.name  %>
   <%= item.price  %>
-  <% @total << item.price %>
   <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
   <%= quantity %>
   <%= button_to "+", cart_path(item_id: item.id),
   class: "button_plus" %>
   <% end %>
 
-  <h3>Total: <%= @total.reduce(:+) %> Rupees</h3>
+  <h3>Total: <%= @total %> Rupees</h3>

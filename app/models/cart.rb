@@ -26,4 +26,13 @@ class Cart
     @contents["#{item_id}"] -= 1
   end
 
+  def total
+    total = []
+    contents.each_pair do |item_id, quantity|
+      item = Item.find(item_id.to_i)
+      total << item.price * quantity
+    end
+    total.reduce(:+)
+  end
+
 end

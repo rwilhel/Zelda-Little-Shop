@@ -11,6 +11,8 @@ class CartController < ApplicationController
 
   def show
     @cart = session[:cart]
+    staged_cart = Cart.new(@cart)
+    @total = staged_cart.total
   end
 
   def destroy
