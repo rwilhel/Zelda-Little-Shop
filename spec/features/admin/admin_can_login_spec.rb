@@ -1,5 +1,9 @@
 require 'rails_helper'
+## Story 19: Admin logs in
 
+# As an Admin
+# When I log in
+# Then I am redirected to "/admin/dashboard"
 RSpec.feature 'admin can login' do
   context "with valid login details" do
     scenario 'an admin can user can login' do
