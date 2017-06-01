@@ -1,0 +1,5 @@
+<h1>Category: <%= @category.name %></h1>
+
+<% @items.category.each do |item| %>
+  <%= item.category.name %>
+<% end %>
