@@ -29,8 +29,9 @@ RSpec.describe 'as a logged in user can checkout' do
     click_on 'Cart'
     click_on 'Checkout'
 
-    expect(user.role?).to eq('patron')
-    expect(current_path).to eq('/orders')
+    expect(user.role).to eq('patron')
+    expect(user.patron?).to eq(true)
+    expect(current_path).to eq('/patron')
     expect(page).to have_content('Checkout')
     expect(page).to have_content('Order was successfully placed')
   end
