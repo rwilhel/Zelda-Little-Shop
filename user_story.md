@@ -12,13 +12,13 @@ As a visitor
 When I visit "/items"
 I can see all existing items -->
 
-## Story 3: Browsing Items by category
+<!-- ## Story 3: Browsing Items by category
 
 Background: I have two categories with titles and each has two different items assigned
 
 As a visitor
 When I visit "/:CATEGORY_NAME"
-I see all items assigned to that category
+I see all items assigned to that category -->
 
 ## Story 4: Adding items to the cart
 
