@@ -1,4 +1,3 @@
-
 def create_categories
   categories = ["Potions",
                 "Food",

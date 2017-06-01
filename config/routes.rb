@@ -1,21 +1,20 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'sessions#show'
 
   resources :users, only: [:new, :create]
-  # resources :carts
   resources :items, only: [:index, :show]
+  resources :categories, only: [:index, :show]
 
   namespace :admin do
-    resources :categories
-    resources :orders
-    resources :items
+
+    get '/dashboard', to: 'dashboard#index'
+
+    resources :orders, only: [:update]
+    resources :items, only: [:new, :create]
   end
 
   namespace :member do
-    resources :categories, only: [:index, :show]
     resources :orders, only: [:new, :create, :index, :show]
-    resources :items, only: [:index, :show]
   end
 
   get '/dashboard', to: 'dashboard#index'
