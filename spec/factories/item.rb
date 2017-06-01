@@ -4,7 +4,7 @@ FactoryGirl.define do
     name
     description
     price 4
-    category_id 1
+    category_id
   end
 
   sequence :name do |n|
@@ -13,5 +13,9 @@ FactoryGirl.define do
 
   sequence :description do |n|
     "Heals the body #{n}"
+  end
+
+  sequence :category_id do |n|
+    n
   end
 end

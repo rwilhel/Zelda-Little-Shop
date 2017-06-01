@@ -1,11 +1,12 @@
-class Cart
+class Cart 
+
   attr_accessor :contents
 
   def initialize(contents)
     @contents = contents || {}
   end
 
-  def update_quantity(item_id)
+  def add_item(item_id)
     contents[item_id.to_s] = (contents[item_id.to_s] || 0) + 1
   end
 

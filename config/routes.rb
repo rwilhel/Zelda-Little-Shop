@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'sessions#show'
 
   resources :users, only: [:new, :create]
-  resources :carts
+  # resources :carts
   resources :items, only: [:index, :show]
 
   namespace :admin do
@@ -24,5 +24,9 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
 
+  get '/cart', to: 'cart#show'
+  post '/cart', to: 'cart#new'
+  delete '/cart', to: 'cart#destroy'
+  put '/cart', to: 'cart#update'
 
 end
