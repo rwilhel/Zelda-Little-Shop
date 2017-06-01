@@ -23,8 +23,7 @@ RSpec.describe "visitor can add item to cart" do
 
     click_on "Cart"
     expect(current_path).to eq(cart_path)
-    expect(page).to have_content("Description")
-    expect(page).to have_content("Price")
     expect(page).to have_content("Total")
+    expect(page).to have_content(item.name)
   end
 end
