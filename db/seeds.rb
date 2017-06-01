@@ -121,9 +121,9 @@ def create_members
   members.each do |member|
     User.create!(username: member[0],
                  password: member[1]
-                 #address: member[2]
+                 #address: patron[2]
                  )
-    puts "Creating member: #{member[0]}"
+    puts "Creating patron: #{member[0]}"
   end
 end
 
