@@ -20,6 +20,4 @@ class CartController < ApplicationController
     cart.decrease_quantity(@item.id)
     redirect_to request.referrer
   end
-
-
 end

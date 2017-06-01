@@ -112,36 +112,34 @@ def create_items_for_category_instruments
   end
 end
 
-  def create_members
-    members = [
-      ["Link", "ilovezelda", "Wherever evil is"],
-      ["Princess Zelda", "ilovelink", "Hyrule Castle"],
-      ["Impa", "iamaninja", "Kakariko Village"],
-      ["Sheik", "ilovelink", "Hyrule Castle"]]
-    members.each do |member|
-      User.create!(username: member[0],
-                   password: member[1]
-                   #address: member[2]
-                   )
-      puts "Creating member: #{member[0]}"
+def create_members
+  members = [
+    ["Link", "ilovezelda", "Wherever evil is"],
+    ["Princess Zelda", "ilovelink", "Hyrule Castle"],
+    ["Impa", "iamaninja", "Kakariko Village"],
+    ["Sheik", "ilovelink", "Hyrule Castle"]]
+  members.each do |member|
+    User.create!(username: member[0],
+                 password: member[1]
+                 #address: member[2]
+                 )
+    puts "Creating member: #{member[0]}"
   end
 end
 
-  def create_admins
-    admins = [
-      ["Daphnes Nohansen Hyrule", "ProudFather", "Hyrule Castle", 1],
-      ["DNH", "ilovezelda", "Hyrule Castle", 1],
-      ["Beedle", "ilovebeetles", "Everywhere he is needed", 1]]
-    admins.each do |admin|
-      User.create!(username: admin[0],
-                   password: admin[1],
-                  #  address: admin[2],
-                   role: admin[3])
-      puts "Creating admin: #{admin[0]}"
-    end
+def create_admins
+  admins = [
+    ["Daphnes Nohansen Hyrule", "ProudFather", "Hyrule Castle", 1],
+    ["DNH", "ilovezelda", "Hyrule Castle", 1],
+    ["Beedle", "ilovebeetles", "Everywhere he is needed", 1]]
+  admins.each do |admin|
+    User.create!(username: admin[0],
+                 password: admin[1],
+                #  address: admin[2],
+                 role: admin[3])
+    puts "Creating admin: #{admin[0]}"
   end
 end
-
 
 create_categories
 create_items_for_category_potions
