@@ -1,0 +1,9 @@
+
+<% @cart.each_pair do |item, quantity|  %>
+  <% item = Item.find(item)  %>
+  <%= item.name  %>
+  <%= item.price  %>
+  <%= quantity %>
+  <% end %>
+
+  Total
