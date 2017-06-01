@@ -15,8 +15,6 @@ class ApplicationController < ActionController::Base
       current_user && current_user.member?
     end
 
-    private
-
     def load_cart
       @cart ||= Cart.new(session[:cart])
     end

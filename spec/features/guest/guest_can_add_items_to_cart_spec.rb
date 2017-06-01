@@ -7,18 +7,22 @@ RSpec.describe "visitor can add item to cart" do
 
     visit items_path
 
+    expect(page).to have_button("Add to Cart")
     click_on "Add to Cart"
     expect(current_path).to eq(items_path)
     expect(page).to have_content("You now have 1 #{item.name} in your cart!")
   end
 
-  xit "can click view cart and items are present" do
+  it "can click view cart and items are present" do
+    Category.create(name: "Potions")
+    item = create(:item)
 
     visit items_path
     click_on "Add to Cart"
+    expect(current_path).to eq(items_path)
 
     click_on "Cart"
-    expect(current_path).to eq("/cart")
+    expect(current_path).to eq(cart_path)
     expect(page).to have_content("Description")
     expect(page).to have_content("Price")
     expect(page).to have_content("Total")
