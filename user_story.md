@@ -4,13 +4,13 @@
 
 See keynote file for wireframe -->
 
-## Story 2: Visitor can view items
+<!-- ## Story 2: Visitor can view items
 
 Background: I have several items and each of them has a title, description, price, and image
 
 As a visitor
 When I visit "/items"
-I can see all existing items
+I can see all existing items -->
 
 ## Story 3: Browsing Items by category
 
