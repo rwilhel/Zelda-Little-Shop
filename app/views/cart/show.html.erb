@@ -1,9 +1,10 @@
-
 <% @cart.each_pair do |item, quantity|  %>
   <% item = Item.find(item)  %>
   <%= item.name  %>
   <%= item.price  %>
+  <%= button_to "-", cart_path(item_id: item.id), class: "button_minus" %>
   <%= quantity %>
+  <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
   <% end %>
 
   Total

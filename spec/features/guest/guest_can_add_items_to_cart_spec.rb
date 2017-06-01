@@ -26,4 +26,19 @@ RSpec.describe "visitor can add item to cart" do
     expect(page).to have_content("Total")
     expect(page).to have_content(item.name)
   end
+
+  it "can increase quantity for specific item in the cart show" do
+    Category.create(name: "Potions")
+    item = create(:item)
+
+    visit items_path
+    click_on "Add to Cart"
+
+    click_on "Cart"
+    expect(page).to have_content("1")
+    click_button "+"
+    expect(page).to have_content("2")
+    click_button "+"
+    expect(page).to have_content("3")
+  end
 end
