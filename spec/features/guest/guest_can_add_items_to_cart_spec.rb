@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "visitor can add item to cart" do
-  xit "can view an item and an add to cart link is present" do
+  it "can view an item and an add to cart link is present" do
     Category.create(name: "Potions")
     item_1 = create(:item)
 
@@ -13,7 +13,7 @@ RSpec.describe "visitor can add item to cart" do
     expect(page).to have_content("You now have 1 #{item_1.name} in your cart!")
   end
 
-  xit "can click view cart and items are present" do
+  it "can click view cart and items are present" do
     Category.create(name: "Potions")
     item_1 = create(:item)
 
@@ -27,7 +27,7 @@ RSpec.describe "visitor can add item to cart" do
     expect(page).to have_content(item_1.name)
   end
 
-  xit "can increase quantity for specific item in the cart show" do
+  it "can increase quantity for specific item in the cart show" do
     Category.create(name: "Potions")
     item_1 = create(:item)
 
@@ -42,7 +42,7 @@ RSpec.describe "visitor can add item to cart" do
     expect(page).to have_content("3")
   end
 
-  xit "can decrease quantity for specific item in the cart show" do
+  it "can decrease quantity for specific item in the cart show" do
     Category.create(name: "Potions")
     item_1 = create(:item)
 
@@ -76,7 +76,7 @@ RSpec.describe "visitor can add item to cart" do
     expect(page).to have_content("1")
   end
 
-  it "can add a second item to cart" do
+  xit "can add a second item to cart" do
 
   end
 

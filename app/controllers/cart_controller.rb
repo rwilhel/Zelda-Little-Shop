@@ -22,4 +22,14 @@ class CartController < ApplicationController
     cart.decrease_quantity(@item.id)
     redirect_to request.referrer
   end
+
+  def update
+    @item = Item.find(params[:item_id])
+    session[:cart].delete(@item.id.to_s)
+    @contents = session[:cart]
+    @cart = Cart.new(@contents)
+    @total = @cart.total
+    flash[:danger_zone] = "Succesfully Removed #{@item.name} from cart"
+    redirect_to request.referrer
+  end
 end

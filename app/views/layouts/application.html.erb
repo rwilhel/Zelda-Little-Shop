@@ -12,7 +12,8 @@
     <%= flash[:success] %>
     <%= flash[:error] %>
     <%= flash[:notice] %>
-    
+    <%= flash[:danger_zone] %>
+
     <%= yield %>
     <%if current_user  %>
     Current User: <%= current_user.username%>
