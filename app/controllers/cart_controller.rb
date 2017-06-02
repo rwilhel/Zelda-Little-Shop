@@ -29,7 +29,7 @@ class CartController < ApplicationController
     @contents = session[:cart]
     @cart = Cart.new(@contents)
     @total = @cart.total
-    flash[:danger_zone] = "Succesfully Removed #{@item.name} from cart"
+    flash[:danger_zone] = "Succesfully Removed #{view_context.link_to(@item.name, item_path(@item))} from cart."
     redirect_to request.referrer
   end
 end
