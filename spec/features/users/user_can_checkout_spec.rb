@@ -14,6 +14,8 @@ RSpec.describe 'as a logged in user can checkout' do
     user = create(:user)
     category = Category.create(name: "Potions")
     item1 = Item.create(name: "Red Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    item2 = Item.create(name: "Blue Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    item3 = Item.create(name: "Yellow Potion", description: "Feeds the body", price: 2, category_id: category.id)
 
     visit root_path
 
@@ -25,7 +27,9 @@ RSpec.describe 'as a logged in user can checkout' do
     click_on "All Items"
 
     click_on "Add #{item1.name} to Cart"
-
+    click_on "Add #{item1.name} to Cart"
+    click_on "Add #{item2.name} to Cart"
+    click_on "Add #{item3.name} to Cart"
 
     click_on 'Cart'
     click_on 'Checkout'
