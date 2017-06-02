@@ -122,7 +122,7 @@ When I click "Logout"
 Then I should see see "Login"
 And I should not see "Logout" -->
 
-## Story 12: Viewing past orders
+<!-- ## Story 12: Viewing past orders
 
 Background: An existing user that has multiple orders
 
@@ -146,7 +146,7 @@ And I should see the total price for the order
 And I should see the date/time that the order was submitted
 
 If the order was completed or cancelled
-Then I should see a timestamp when the action took place
+Then I should see a timestamp when the action took place -->
 
 ## Story 14: Retired Items
 
