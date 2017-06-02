@@ -17,6 +17,7 @@ class Patron::OrdersController < Patron::BaseController
 
   def show
     @order = Order.find(params[:id])
+    @line_items = OrdersItem.where(order_id: @order.id)
   end
 
   private
