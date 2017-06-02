@@ -19,7 +19,7 @@ Background: I have two categories with titles and each has two different items a
 As a visitor
 When I visit "/:CATEGORY_NAME"
 I see all items assigned to that category -->
-
+<!--
 ## Story 4: Adding items to the cart
 
 Background: Items, and a user that is not logged in
@@ -31,9 +31,9 @@ When I click "Add to cart" for that item
 And I click a link or button to view cart
 And my current path should be "/cart"
 And I should see a small image, title, description and price for the item I just added
-And there should be a "total" price for the cart that should be the sum of all items in the cart
+And there should be a "total" price for the cart that should be the sum of all items in the cart -->
 
-## Story 5: Removing an item from my cart
+<!-- ## Story 5: Removing an item from my cart
 
 Background: My cart has an item in it
 
@@ -42,11 +42,11 @@ When I visit "/cart"
 And I click link "Remove"
 Then my current page should be "/cart"
 And I should see a message styled in green
-And the message should say "Successfully removed SOME_ITEM from your cart."
+And the message should say "Successfully removed SOME_ITEM from your cart." -->
 And the title "SOME_ITEM" should be a link to that item in case the user wants to add it back
-And I should not see the item listed in cart
+<!-- And I should not see the item listed in cart -->
 
-## Story 6: Adjusting the quantity of an item in the cart
+<!-- ## Story 6: Adjusting the quantity of an item in the cart
 
 Background: My cart has an item in it
 
@@ -57,8 +57,8 @@ And when I increase the quantity
 Then my current page should be '/cart'
 And that item's quantity should reflect the increase
 And the subtotal for that item should increase
-And the total for the cart should match that increase
-
+And the total for the cart should match that increase -->
+<!--
 ## Story 7:
 
 Background: My cart has an item in it
@@ -70,7 +70,7 @@ When I decrease the quantity
 Then my current page should be '/cart'
 And that item's quantity should reflect the decrease
 And the subtotal for that item should decrease
-And the total for the cart should match that decrease
+And the total for the cart should match that decrease -->
 
 <!-- ## Story 8: Authenticated User
 
@@ -154,7 +154,7 @@ As a user if I visit an item page and that item has been retired
 Then I should still be able to access the item page
 And I should not be able to add the item to their cart
 And I should see in place of the "Add to Cart" button or link - "Item Retired"
-
+<!--
 ## Story 15: Checking out
 
 Background: An existing user and a cart with items
@@ -171,7 +171,7 @@ And when I click "Checkout"
 Then the order should be placed
 And my current page should be "/orders"
 And I should see a message "Order was successfully placed"
-And I should see the order I just placed in a table
+And I should see the order I just placed in a table -->
 
 ## Story 16: Authenticated users security
 

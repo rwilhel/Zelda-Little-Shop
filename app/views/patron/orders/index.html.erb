@@ -1,0 +1,4 @@
+<% @orders.each do |order| %>
+<%= link_to "Order: #{order.id}", patron_order_path(order.id) %>
+<br>
+<% end %>

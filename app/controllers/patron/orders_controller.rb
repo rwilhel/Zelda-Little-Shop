@@ -1,6 +1,7 @@
 class Patron::OrdersController < Patron::BaseController
 
   def index
+    @orders = Order.all
   end
 
   def new
@@ -12,6 +13,10 @@ class Patron::OrdersController < Patron::BaseController
     else
       redirect_to cart_path
     end
+  end
+
+  def show
+    @order = Order.find(params[:id])
   end
 
   private
