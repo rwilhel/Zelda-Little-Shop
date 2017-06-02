@@ -148,13 +148,14 @@ And I should see the date/time that the order was submitted
 If the order was completed or cancelled
 Then I should see a timestamp when the action took place -->
 
-## Story 14: Retired Items
+<!-- ## Story 14: Retired Items
 
 As a user if I visit an item page and that item has been retired
 Then I should still be able to access the item page
 And I should not be able to add the item to their cart
-And I should see in place of the "Add to Cart" button or link - "Item Retired"
+And I should see in place of the "Add to Cart" button or link - "Item Retired" -->
 <!--
+
 ## Story 15: Checking out
 
 Background: An existing user and a cart with items
