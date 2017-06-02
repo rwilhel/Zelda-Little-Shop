@@ -61,4 +61,34 @@ RSpec.describe "When an authenticated user visits a retired item's page" do
 
     expect(page).to_not have_content("Add #{item2.name} to Cart")
   end
+
+  it "cannot see Add to Cart button on retired item's show page" do
+    user = User.create(username: "Link", password: "passsword")
+    category = Category.create(name: "Potions")
+    item1 = Item.create!(name: "Red Potion",
+                  description: "feels guuuuud",
+                  price: 10,
+                  category_id: category.id)
+    item2 = Item.create!(name: "Blue Potion",
+                  description: "feels guuuuud",
+                  price: 10,
+                  category_id: category.id,
+                  status: false)
+    item3 = Item.create!(name: "Purple Potion",
+                  description: "feels guuuuud",
+                  price: 10,
+                  category_id: category.id)
+
+    visit root_path
+
+    click_on 'Login'
+    fill_in 'Username', with: "#{user.username}"
+    fill_in 'Password', with: 'passsword'
+    click_on 'Login'
+
+    visit items_path
+
+    click_on "Blue Potion"
+    expect(current_path).to eq("/items/#{item2.id}")
+  end
 end
