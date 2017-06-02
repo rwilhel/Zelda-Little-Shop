@@ -28,18 +28,18 @@ ActiveRecord::Schema.define(version: 20170601223404) do
     t.index ["category_id"], name: "index_items_on_category_id"
   end
 
-  create_table "order_items", force: :cascade do |t|
-    t.bigint "order_id"
-    t.bigint "item_id"
-    t.integer "quantity"
-    t.index ["item_id"], name: "index_order_items_on_item_id"
-    t.index ["order_id"], name: "index_order_items_on_order_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
     t.string "status", default: "Ordered"
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "orders_items", force: :cascade do |t|
+    t.bigint "order_id"
+    t.bigint "item_id"
+    t.integer "quantity"
+    t.index ["item_id"], name: "index_orders_items_on_item_id"
+    t.index ["order_id"], name: "index_orders_items_on_order_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20170601223404) do
   end
 
   add_foreign_key "items", "categories"
-  add_foreign_key "order_items", "items"
-  add_foreign_key "order_items", "orders"
   add_foreign_key "orders", "users"
+  add_foreign_key "orders_items", "items"
+  add_foreign_key "orders_items", "orders"
 end

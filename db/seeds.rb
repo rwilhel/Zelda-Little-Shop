@@ -148,3 +148,5 @@ create_items_for_category_bags
 create_items_for_category_bottle_items
 create_items_for_category_equipment
 create_items_for_category_instruments
+create_admins
+create_members
