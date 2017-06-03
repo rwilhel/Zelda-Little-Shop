@@ -174,14 +174,14 @@ And my current page should be "/orders"
 And I should see a message "Order was successfully placed"
 And I should see the order I just placed in a table -->
 
-## Story 16: Authenticated users security
+<!-- ## Story 16: Authenticated users security
 
 Background: An authenticated user
 
 As an Authenticated User
 I cannot view another user's private data (current or past orders, etc)
 I cannot view the administrator screens or use admin functionality
-I cannot make myself an admin
+I cannot make myself an admin -->
 
 ## Story 17: Unauthenticated users security
 
