@@ -105,7 +105,7 @@ And I should see my profile information
 And I should not see a link for "Login"
 And I should see a link for "Logout" -->
 
-## Story 10: Guest User
+<!-- ## Story 10: Guest User
 
 As a visitor when I have items in my cart
 And when I visit "/cart"
@@ -113,7 +113,7 @@ I should not see an option to "Checkout"
 I should see an option to "Login or Create Account to Checkout"
 After I create an account
 And I visit "/cart
-Then I should see all of the data that was there when I was not logged in
+Then I should see all of the data that was there when I was not logged in -->
 
 <!-- ## Story 11: User Can Log Out
 
@@ -183,7 +183,7 @@ I cannot view another user's private data (current or past orders, etc)
 I cannot view the administrator screens or use admin functionality
 I cannot make myself an admin -->
 
-## Story 17: Unauthenticated users security
+<!-- ## Story 17: Unauthenticated users security
 
 Background: An unauthenticated user and their abilities
 
@@ -191,7 +191,7 @@ As an Unauthenticated User
 I cannot view another user's private data, such as current order, etc.
 I should be redirected to login/create account when I try to check out.
 I cannot view the administrator screens or use administrator functionality.
-I cannot make myself an administrator.
+I cannot make myself an administrator. -->
 
 ## Story 18: Admin User Dashboard
 
