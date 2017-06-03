@@ -1,0 +1,6 @@
+<% @orders.each do |order| %>
+<%= link_to "Order: #{order.id}", admin_order_path(order.id) %>
+<%= link_to "Complete", admin_order_path(order.id), class:"btn btn-success" %>
+<%= link_to "Delete", admin_order_path(order.id), method: :delete, class:"btn btn-danger" %>
+<br>
+<% end %>

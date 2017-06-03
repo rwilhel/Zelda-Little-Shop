@@ -193,7 +193,7 @@ I should be redirected to login/create account when I try to check out.
 I cannot view the administrator screens or use administrator functionality.
 I cannot make myself an administrator. -->
 
-## Story 18: Admin User Dashboard
+<!-- ## Story 18: Admin User Dashboard
 
 As a logged in Admin
 When I visit "/admin/dashboard"
@@ -205,13 +205,13 @@ I get a 404
 
 As an unregistered user
 When I visit "/admin/dashboard"
-I get a 404
+I get a 404 -->
 
-## Story 19: Admin logs in
+<!-- ## Story 19: Admin logs in
 
 As an Admin
 When I log in
-Then I am redirected to "/admin/dashboard"
+Then I am redirected to "/admin/dashboard" -->
 
 ## Story 20: Admin cannot modify users
 

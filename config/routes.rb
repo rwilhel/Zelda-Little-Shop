@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
     get '/dashboard', to: 'dashboard#index'
 
-    resources :orders, only: [:update]
+    resources :orders, only: [:index, :update, :destroy]
     resources :items, only: [:new, :create]
+    resources :users, only: [:show]
   end
 
   namespace :patron do

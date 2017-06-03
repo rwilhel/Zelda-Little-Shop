@@ -12,7 +12,7 @@
           <li class="navbar-left"><%= link_to "Cart", cart_path %></li>
           <li class="navbar-right"><%= link_to "Logout", logout_path, method: :delete %></li>
         <% elsif current_admin? %>
-          <li class="navbar-left"><%= link_to "Admin Dashboard", admin_dashboard_path %></li>
+          <li class="navbar-left"><%= link_to "Account", admin_user_path(current_user) %></li>
           <li class="navbar-left"><%= link_to "Cart", cart_path %></li>
           <li class="navbar-right"><%= link_to "Logout", logout_path, method: :delete %></li>
         <% else %>
