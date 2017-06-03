@@ -213,12 +213,12 @@ As an Admin
 When I log in
 Then I am redirected to "/admin/dashboard" -->
 
-## Story 20: Admin cannot modify users
+<!-- ## Story 20: Admin cannot modify users
 
 As a logged in Admin
 I can modify my account data
 
-But I cannot modify any other user's account data
+But I cannot modify any other user's account data -->
 
 ## Story 21: Admin Orders
 
