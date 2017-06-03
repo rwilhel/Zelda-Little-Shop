@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sessions#show'
+  root 'dashboard#index'
 
   resources :users, only: [:new, :create]
   resources :items, only: [:index, :show]

@@ -13,6 +13,5 @@ RSpec.describe "guest cannot view user accounts" do
     visit patron_user_path(lunk)
 
     expect(current_path).to eq("/dashboard")
-
   end
 end
