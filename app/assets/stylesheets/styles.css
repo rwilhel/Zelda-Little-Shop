@@ -1,0 +1,17 @@
+
+
+nav.navbar.navbar-default.navbar-fixed-top {
+    background-color: #0d9263;
+}
+
+nav.navbar-default .navbar-nav > li > a {
+    color: whitesmoke;
+}
+
+nav.navbar-default .navbar-brand {
+    color: white;
+}
+
+div.session {
+    margin-top: 10%;
+}
