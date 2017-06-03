@@ -20,6 +20,7 @@ RSpec.describe "guest can't check out" do
     item_1 = create(:item)
 
     visit items_path
+
     click_on "Add #{item_1.name} to Cart"
 
     click_on "Cart"
@@ -28,9 +29,10 @@ RSpec.describe "guest can't check out" do
 
     fill_in "Username", with: "Link"
     fill_in "Password", with: "password"
-
+    click_on "Create Account"
     click_on "Cart"
 
     expect(page).to have_content("#{item_1.name}")
+    expect(page).to have_content("Checkout")
   end
 end
