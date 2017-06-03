@@ -4,3 +4,4 @@
   <%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-danger" %>
 <% end %>
 <h3>Active? <%= @item.status %></h3>
+<%= link_to "Back to all items", items_path %>

@@ -11,6 +11,7 @@ class Patron::OrdersController < Patron::BaseController
       flash[:order_success] = "Order was successfully placed"
       redirect_to patron_orders_path
     else
+      flash[:cart_error] = "Order could not be placed."
       redirect_to cart_path
     end
   end
@@ -28,5 +29,4 @@ class Patron::OrdersController < Patron::BaseController
       OrdersItem.create!(order_id: order.id, item_id: item.to_i, quantity: quantity )
     end
   end
-
 end
