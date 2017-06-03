@@ -19,14 +19,14 @@ RSpec.describe "user cannot see other users info" do
     fill_in 'Password', with: 'password'
     click_button 'Login'
 
-    click_on "Account"
+    visit patron_user_path(user)
 
-    expect(current_path).to be("/users/#{user.id}")
+    expect(current_path).to eq("/patron/users/#{user.id}")
     expect(page).to have_content("#{user.username}")
     expect(page).to_not have_content("#{maboy.username}")
 
     click_on "Orders"
-    expect(current_path).to eq("/patron/#{user.id}/orders")
+    expect(current_path).to eq("/patron/orders")
     expect(page).to have_content("Order: 1")
   end
 end
