@@ -1,0 +1,24 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <%= link_to "Zelda's Little Shop", root_path, class: "navbar-brand navbar-left" %>
+    </div>
+    <ul class="nav navbar-nav pull-right">
+      <% if current_patron? %>
+          <p class="navbar-text navbar-left">Welcome, <%= current_user.username %>!</p>
+          <li class="navbar-left"><%= link_to "Logout", logout_path, method: :delete %></li>
+          <li class="navbar-left"><%= link_to "Patron Dashboard", current_user %></li>
+
+
+          <% if current_admin? %>
+              <li class="navbar-left"><%= link_to "Admin Dashboard", admin_dashboard_path %></li>
+          <% end %>
+      <% else %>
+          <li class="navbar-right"><%= link_to "Cart", cart_path %></li>
+          <li class="navbar-right"><%= link_to "Login", login_path %></li>
+          <li class="navbar-right"><%= link_to "Create Account", new_user_path %></li>
+
+      <% end %>
+    </ul>
+  </div>
+</nav>
