@@ -220,7 +220,7 @@ I can modify my account data
 
 But I cannot modify any other user's account data -->
 
-## Story 21: Admin Orders
+<!-- ## Story 21: Admin Orders
 
 As an Admin
 When I visit the dashboard
@@ -231,7 +231,7 @@ And I can filter orders to display by each status type  **("Ordered", "Paid", "C
 And I have links to transition between statuses
 - I can click on "cancel" on individual orders which are "paid" or "ordered"
 - I can click on "mark as paid" on orders that are "ordered"
-- I can click on "mark as completed" on orders that are "paid"
+- I can click on "mark as completed" on orders that are "paid" -->
 
 ## Story 22: Admin views an individual Order
 
