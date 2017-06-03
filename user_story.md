@@ -193,7 +193,7 @@ I should be redirected to login/create account when I try to check out.
 I cannot view the administrator screens or use administrator functionality.
 I cannot make myself an administrator. -->
 
-## Story 18: Admin User Dashboard
+<!-- ## Story 18: Admin User Dashboard
 
 As a logged in Admin
 When I visit "/admin/dashboard"
@@ -205,7 +205,7 @@ I get a 404
 
 As an unregistered user
 When I visit "/admin/dashboard"
-I get a 404
+I get a 404 -->
 
 <!-- ## Story 19: Admin logs in
 
@@ -213,14 +213,14 @@ As an Admin
 When I log in
 Then I am redirected to "/admin/dashboard" -->
 
-## Story 20: Admin cannot modify users
+<!-- ## Story 20: Admin cannot modify users
 
 As a logged in Admin
 I can modify my account data
 
-But I cannot modify any other user's account data
+But I cannot modify any other user's account data -->
 
-## Story 21: Admin Orders
+<!-- ## Story 21: Admin Orders
 
 As an Admin
 When I visit the dashboard
@@ -231,7 +231,7 @@ And I can filter orders to display by each status type  **("Ordered", "Paid", "C
 And I have links to transition between statuses
 - I can click on "cancel" on individual orders which are "paid" or "ordered"
 - I can click on "mark as paid" on orders that are "ordered"
-- I can click on "mark as completed" on orders that are "paid"
+- I can click on "mark as completed" on orders that are "paid" -->
 
 ## Story 22: Admin views an individual Order
 

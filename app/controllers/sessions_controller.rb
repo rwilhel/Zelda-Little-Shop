@@ -11,7 +11,11 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.username}!"
-      redirect_to "/dashboard"
+      if current_admin?
+        redirect_to "/admin/dashboard"
+      else
+        redirect_to "/dashboard"
+      end
     else
       flash[:error] = "U gun dun goofed"
       render :new

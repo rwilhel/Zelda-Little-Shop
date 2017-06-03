@@ -79,9 +79,4 @@ RSpec.describe "visitor can add item to cart" do
   xit "can add a second item to cart" do
 
   end
-
-  # find(".button_plus1").(:button).click
-  # click_button "+"
-  # expect(page).to have_content("2")
-  # expect(page).to have_content("15 Rupees")
 end

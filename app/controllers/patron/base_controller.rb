@@ -3,6 +3,6 @@ class Patron::BaseController < ApplicationController
 
 
   def require_patron
-    render file: "/public/404" unless current_patron?
+    redirect_to dashboard_path unless current_patron?
   end
 end

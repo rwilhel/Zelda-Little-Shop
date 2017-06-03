@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'sessions#show'
+  root 'dashboard#index'
 
   resources :users, only: [:new, :create]
   resources :items, only: [:index, :show]
@@ -9,8 +9,9 @@ Rails.application.routes.draw do
 
     get '/dashboard', to: 'dashboard#index'
 
-    resources :orders, only: [:update]
+    resources :orders, only: [:index, :update, :destroy]
     resources :items, only: [:new, :create]
+    resources :users, only: [:show]
   end
 
   namespace :patron do
