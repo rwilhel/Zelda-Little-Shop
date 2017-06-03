@@ -16,8 +16,8 @@ RSpec.describe "guest can browse categories" do
 
   it "can go to a specific category" do
     category = Category.create(name: "Potions")
-    item1 = Item.create(name: "Red Potion", description: "Feeds the body", price: 2, category_id: 3)
-    item2 = Item.create(name: "Blue Potion", description: "Feeds the body", price: 2, category_id: 3)
+    item1 = Item.create(name: "Red Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    item2 = Item.create(name: "Blue Potion", description: "Feeds the body", price: 2, category_id: category.id)
 
     visit categories_path
     click_on "Potions"
