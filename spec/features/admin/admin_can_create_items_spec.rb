@@ -36,4 +36,6 @@ RSpec.describe "Admin can create items" do
     expect(page).to have_content("Yellow Potion")
 
   end
+
+  
 end
