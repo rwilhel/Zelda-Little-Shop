@@ -9,6 +9,9 @@ RSpec.describe "Admin views an individual order" do
                   price: 10,
                   category_id: category.id)
     order1 = Order.create(user_id: admin.id)
+    orderitem = OrdersItem.create(order_id: order1.id,
+                                    item_id: item.id,
+                                    quantity: 2342334)
 
     visit root_path
 
@@ -24,5 +27,9 @@ RSpec.describe "Admin views an individual order" do
     expect(page).to have_content("Order: #{order1.id}")
     expect(page).to have_content("Complete")
     expect(page).to have_content("Delete")
+
+    click_on "#{order1.id}"
+    expect(page).to have_content("Order Date")
+    expect(page).to have_content("#{item.name}")
   end
 end

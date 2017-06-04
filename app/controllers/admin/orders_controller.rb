@@ -4,6 +4,11 @@ class Admin::OrdersController < Admin::BaseController
     @orders = Order.all
   end
 
+  def show
+    @order = Order.find(params[:id])
+    @line_items = OrdersItem.where(order_id: @order.id)
+  end
+
   def destroy
     @order = Order.find(params[:id])
     @order.destroy
