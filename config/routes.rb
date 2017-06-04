@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     get '/dashboard', to: 'dashboard#index'
 
     resources :orders
-    resources :items, only: [:new, :create]
+    resources :items
     resources :users, only: [:show]
   end
 

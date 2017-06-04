@@ -8,6 +8,10 @@ nav.navbar-default .navbar-nav > li > a {
     color: whitesmoke;
 }
 
+.patron-profile {
+  margin-top: 7%;
+}
+
 nav.navbar-default .navbar-brand {
     color: white;
 }

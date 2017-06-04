@@ -233,7 +233,7 @@ And I have links to transition between statuses
 - I can click on "mark as paid" on orders that are "ordered"
 - I can click on "mark as completed" on orders that are "paid" -->
 
-## Story 22: Admin views an individual Order
+<!-- ## Story 22: Admin views an individual Order
 
 As an authenticated Admin, when I visit an individual order page
 Then I can see the order's date and time.
@@ -244,7 +244,7 @@ And I can see, for each item on the order:
   - Price
   - Line item subtotal.
 And I can see the total for the order.
-And I can see the status for the order.
+And I can see the status for the order. -->
 
 ## Story 23: Admin Item Creation
 

@@ -1,14 +1,15 @@
-<h1>Order: <%= @order.id %> </h1>
-<h2>Order Date: <%= @order.created_at %></h2>
-<h2>Order Status: <%= @order.status %></h2>
 
-<% total = []  %>
-<%  @line_items.each do |oi| %>
-      <% item = Item.find(oi.item_id)  %>
-      Name: <%= item.name  %><br>
-      Quantity:<%= oi.quantity %><br>
-        <% subtotal = (item.price) * oi.quantity %>
-        <% total << subtotal  %>
-      Subtotal: <%= subtotal %><br>
+  <h1>Order: <%= @order.id %> </h1>
+  <h2>Order Date: <%= @order.created_at %></h2>
+  <h2>Order Status: <%= @order.status %></h2>
+
+  <% total = []  %>
+  <%  @line_items.each do |oi| %>
+  <% item = Item.find(oi.item_id)  %>
+  Name: <%= item.name  %><br>
+  Quantity:<%= oi.quantity %><br>
+  <% subtotal = (item.price) * oi.quantity %>
+  <% total << subtotal  %>
+  Subtotal: <%= subtotal %><br>
   <%end  %>
   Total: <%= total.reduce(:+)  %>

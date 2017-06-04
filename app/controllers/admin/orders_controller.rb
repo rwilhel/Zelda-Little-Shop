@@ -7,6 +7,7 @@ class Admin::OrdersController < Admin::BaseController
   def show
     @order = Order.find(params[:id])
     @line_items = OrdersItem.where(order_id: @order.id)
+    @purchaser = User.find(@order.user_id)
   end
 
   def destroy
