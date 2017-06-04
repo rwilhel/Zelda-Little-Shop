@@ -1,5 +1,10 @@
-<h1>Category: <%= @category.name %></h1>
-
-<% @items.each do |item| %>
+<div class="page-header">
+<div class="container">
+  <h1>Category: <%= @category.name %></h1>
+</div>
+</div>
+<div class="container">
+  <% @items.each do |item| %>
   <%= link_to item.name, item_path(item.id) %><br>
-<% end %>
+  <% end %>
+</div>
