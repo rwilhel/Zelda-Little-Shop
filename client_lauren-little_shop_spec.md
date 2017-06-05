@@ -14,8 +14,13 @@
   + Authorization with regards to checking out and creating order.
 3. Iteration 3 ***(5Jun17 - 6Jun17)***:
   + Complete second client meeting.
-  + Admin abilities.
+  + Admin statistics
+  + Image asset functionality
+  + Refactor
+  + Styling
 4. Iteration 4 ***(7Jun17 - 8Jun17)***:
+  + Refactor
+  + Styling
   + Extensions.
 
 **Features:**
@@ -38,7 +43,7 @@
 ### Client Specifications
 
 **Meeting - 1 June 17:**
-  + Focus on the checkout process
   + Cascade of the user story -- focus on the flow
+  + Focus on the checkout process
 
 **Meeting - 5 June 17:**

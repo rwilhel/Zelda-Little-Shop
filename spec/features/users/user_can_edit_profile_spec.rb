@@ -28,6 +28,7 @@ RSpec.describe "registered user can edit profile" do
     click_on 'Login'
     fill_in 'Username', with: "Ben"
     fill_in 'Password', with: 'something'
+    fill_in 'Address', with: "something"
     click_on 'Login'
 
     expect(current_path).to eq('/dashboard')
