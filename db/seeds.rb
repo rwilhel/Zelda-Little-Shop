@@ -65,6 +65,22 @@ def create_items_for_category_storage
   end
 end
 
+def create_items_for_category_munitions
+  items = [
+    ["3 Bombs", "A pack of 3 Bombs", 15],
+    ["5 Bombs", "A pack of 5 Bombs", 25],
+    ["10 Bombs", "A pack of 10 Bombs", 45],
+    ["10 Arrows", "A bundle of 10 Arrows", 15],
+    ["25 Arrows", "A bundle of 25 Arrows", 25]]
+    items.each do |item|
+      Item.create!(name: item[0],
+      description: item[1],
+      price: item[2],
+      category_id: Category.find_by(name: "General Goods").id)
+      puts "Creating item: #{item[0]} for General Goods Category"
+    end
+  end
+
 def create_items_for_category_equipment
   items = [
     ["Wooden Sword", "A sword made of wood. Poor durability", 10],
@@ -126,7 +142,7 @@ create_categories
 create_items_for_category_potions
 create_items_for_category_general_goods
 create_items_for_category_storage
-# create_items_for_category_munitions
+create_items_for_category_munitions
 create_items_for_category_equipment
 create_items_for_category_key_items
 create_admins
