@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20170601223404) do
     t.string "username"
     t.string "password_digest"
     t.integer "role", default: 0
+    t.string "location", default: "Hyrule"
   end
 
   add_foreign_key "items", "categories"

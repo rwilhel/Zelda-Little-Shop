@@ -102,9 +102,8 @@ def create_members
     ["Sheik", "ilovelink", "Hyrule Castle"]]
   members.each do |member|
     User.create!(username: member[0],
-                 password: member[1]
-                 location: member[2]
-                 )
+                 password: member[1],
+                 location: member[2])
     puts "Creating patron: #{member[0]}"
   end
 end
@@ -127,7 +126,7 @@ create_categories
 create_items_for_category_potions
 create_items_for_category_general_goods
 create_items_for_category_storage
-create_items_for_category_munitions
+# create_items_for_category_munitions
 create_items_for_category_equipment
 create_items_for_category_key_items
 create_admins
