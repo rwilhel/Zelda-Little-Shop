@@ -246,7 +246,7 @@ And I can see, for each item on the order:
 And I can see the total for the order.
 And I can see the status for the order. -->
 
-## Story 23: Admin Item Creation
+<!-- ## Story 23: Admin Item Creation
 
 As an authenticated Admin:
 I can create an item.
@@ -254,10 +254,10 @@ I can create an item.
 - An item must belong to at least one category.
 - The title and description cannot be empty.
 - The title must be unique for all items in the system.
-- The price must be a valid decimal numeric value and greater than zero.
+- The price must be a valid decimal numeric value and greater than zero. -->
 - The photo is optional. If not present, a stand-in photo is used. **(PAPERCLIP)**
 
-## Story 24: Admin Viewing items
+<!-- ## Story 24: Admin Viewing items
 
 As an Admin
 When I visit "/admin/dashboard"
@@ -270,14 +270,14 @@ And each item should have:
 - Title that links to the item
 - Description
 - Status
-- Actions (Edit)
-
+- Actions (Edit) -->
+<!--
 ## Story 25: Admin edits an item
 
 Background: an existing item
 
 As an admin
 When I visit "admin/items"
-And I click "Edit"
+And I click "Edit" -->
 Then my current path should be "/admin/items/:ITEM_ID/edit"
 And I should be able to update title, description, image, and status
