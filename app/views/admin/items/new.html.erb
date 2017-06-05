@@ -1,7 +1,8 @@
 <div class="container session">
   <h2>Login here: </h2> <br>
 
-  <%= form_for [@item] do |f| %>
+  <%= form_for @item, url: items_path, html: { multipart: true } do |f| %>
+    <%= f.file_field :avatar %>
       <div class="field form-group">
         <%= f.label :name, class: 'col-sm-2 control-label' %>
         <div class="col-sm-6">

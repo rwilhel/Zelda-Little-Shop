@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
     @item = Item.new(name: params[:item][:name],
                         description: params[:item][:description],
                         price: params[:item][:price].to_i,
-                        category_id: params[:item][:category].to_i)
+                        category_id: params[:item][:category].to_i, avatar: params[:item][:avatar])
     if @item.save
       flash[:item_creation] = "You successfully created #{@item.name}"
       redirect_to admin_user_path(@admin)
@@ -39,6 +39,6 @@ class ItemsController < ApplicationController
   def item_params
   params[:item][:price] = params[:item][:price].to_i
   params[:item][:category_id] = Category.find(params[:item][:category_id].to_i).id
-  params.require(:item).permit(:name, :description, :price, :category_id)
+  params.require(:item).permit(:name, :description, :price, :category_id, :avatar)
   end
 end
