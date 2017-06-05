@@ -4,7 +4,7 @@
   </div>
 </div>
 
-<%= form_for @user do |f| %>
+<%= form_for [:patron, @user] do |f| %>
 
   <%= f.label :username %>
   <%= f.text_field :username%>
@@ -13,5 +13,5 @@
   <%= f.password_field :password %>
 
   <%= f.submit %>
-  
+
 <% end %>

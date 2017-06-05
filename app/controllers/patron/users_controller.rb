@@ -10,7 +10,20 @@ class Patron::UsersController < Patron::BaseController
   end
 
   def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    if @user.save
+      flash[:user_updated] = "You successfully updated #{@user.username}'s Profile."
+      redirect_to patron_user_path(@user)
+    else
+      redirect_to edit_patron_user_path(@user)
+    end
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:username, :password)
+  end
 
 end
