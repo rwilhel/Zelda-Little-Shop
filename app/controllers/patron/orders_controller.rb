@@ -7,6 +7,7 @@ class Patron::OrdersController < Patron::BaseController
   def new
     @order = Order.new(user_id: current_user.id)
     if @order.save
+      # replicate save method with your own method. Possible refactor.
       create_join_table_entries(@order)
       flash[:order_success] = "Order was successfully placed"
       redirect_to patron_orders_path
@@ -22,7 +23,6 @@ class Patron::OrdersController < Patron::BaseController
   end
 
   private
-
   def create_join_table_entries(order)
     @cart = session[:cart]
     @cart.each_pair do |item, quantity|

@@ -12,19 +12,25 @@
   + Complete first client meeting.
   + Build out base process for regular user.
   + Authorization with regards to checking out and creating order.
+  + Complete majority of User Stories.
 3. Iteration 3 ***(5Jun17 - 6Jun17)***:
   + Complete second client meeting.
+
   + Admin statistics
   + Image asset functionality
   + Refactor
   + Styling
+=
+  + Admin can edit pictures.
+  + Complete image asset functionality.
+
 4. Iteration 4 ***(7Jun17 - 8Jun17)***:
   + Refactor
   + Styling
   + Extensions.
 
 **Features:**
-***Updated 1 Jun 17***
+***Updated 5 Jun 17***
 1. User
   + Create User with role: Member and Admin.
   + Can add /remove items to Cart and adjust quantity.
@@ -47,3 +53,5 @@
   + Focus on the checkout process
 
 **Meeting - 5 June 17:**
+  + Complete Vanity URL
+  + Complete image asset functionality
