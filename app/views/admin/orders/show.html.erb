@@ -3,6 +3,7 @@
   <h2>Order Date: <%= @order.created_at %></h2>
   <h2>Order Status: <%= @order.status %></h2>
   <h2>Customer: <%= @purchaser %> </h2>
+  <h2>Address: <%=  %> </h2>
 
   <% total = []  %>
   <%  @line_items.each do |oi| %>
