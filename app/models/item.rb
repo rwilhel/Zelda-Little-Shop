@@ -5,6 +5,6 @@ class Item < ApplicationRecord
   has_many :orders, through: :orders_items
 
   def retired_item?
-    self.status ? false : true
+    !self.status
   end
 end
