@@ -1,6 +1,8 @@
+
 <h2><%= @item.name %></h2>
 
 <% if @item.retired_item? %>
-  <%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-danger" %>
+  <%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-danger btn-xs" %>
 <% end %>
 <h3>Active? <%= @item.status %></h3>
+<%= link_to "Back to all items", items_path %>

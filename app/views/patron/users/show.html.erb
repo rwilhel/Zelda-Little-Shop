@@ -1,0 +1,12 @@
+<div class="patron-profile">
+  <h1><%= @user.username %>'s Account Information</h1>
+
+  <%= link_to "Orders", patron_orders_path %>
+
+  <h2>Profile Info:</h2>
+
+  <h3>Username: <%= @user.username  %> </h3>
+  <h4>Orders Placed: <%= @orders %></h4>
+  <h4>Money Spent at Store: </h4>
+
+</div>

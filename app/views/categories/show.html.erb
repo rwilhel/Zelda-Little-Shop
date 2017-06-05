@@ -1,5 +1,14 @@
-<h1>Category: <%= @category.name %></h1>
-
-<% @items.each do |item| %>
+<div class="page-header">
+<div class="container">
+  <h1>Category: <%= @category.name %></h1>
+</div>
+</div>
+<div class="container">
+  <% @items.each do |item| %>
   <%= link_to item.name, item_path(item.id) %><br>
-<% end %>
+  Price: <%= item.price %> Rupees <br>
+    <% if item.retired_item? == false %>
+      <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-danger btn-xs" %>
+    <% end %>
+  <% end %>
+</div>

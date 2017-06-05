@@ -1,0 +1,36 @@
+<div class="container session">
+  <h2>Login here: </h2> <br>
+
+  <%= form_for [@item] do |f| %>
+      <div class="field form-group">
+        <%= f.label :name, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.text_field :name, placeholder: 'Name', class: 'form-control' %><br>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :description, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.text_field :description, placeholder: 'Description', class: 'form-control' %><br>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :price, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.number_field :price, placeholder: 'Price', class: 'form-control' %><br>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :category, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.collection_select :category, Category.order(:name),:id,:name, include_blank: true %>
+        </div>
+      </div>
+
+      <div class="actions form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit 'Submit', class: 'btn btn-success' %>
+        </div>
+      </div>
+  <% end %>
+</div>

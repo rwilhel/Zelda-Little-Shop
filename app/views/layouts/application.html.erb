@@ -9,16 +9,11 @@
   </head>
 
   <body>
-    <%= flash[:success] %>
-    <%= flash[:error] %>
-    <%= flash[:notice] %>
-    <%= flash[:danger_zone] %>
-    <%= flash[:order_success] %>
+    <% flash.each do |name, message| %>
+    <%= sanitize(message)  %>
+    <% end %>
 
     <%= yield %>
-    <%if current_user  %>
-    Current User: <%= current_user.username%>
-    <%= link_to "Logout", logout_path, method: :delete %>
-    <%end %>
+    <%= render partial: 'shared/navbar' %>
   </body>
 </html>

@@ -13,6 +13,7 @@ RSpec.describe "guest can remove item from cart" do
     click_on "Remove"
     expect(page).to have_content("Succesfully Removed #{item.name} from cart")
     expect(page).to_not have_content("5")
-    #will need to ensure the flash message is a link to that item
+    click_on "#{item.name}"
+    expect(current_path).to eq("/items/#{item.id}")
   end
 end

@@ -1,0 +1,23 @@
+<div class="container session">
+  <h2>Login here: </h2> <br>
+
+  <%= form_for(:session, url: login_path, html: {class: 'form-horizontal'}) do |f| %>
+      <div class="field form-group">
+        <%= f.label :username, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.text_field :username, placeholder: 'username', class: 'form-control' %><br>
+        </div>
+      </div>
+      <div class="field form-group">
+        <%= f.label :password, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-6">
+          <%= f.password_field :password, placeholder: 'password', class: 'form-control' %><br>
+        </div>
+      </div>
+      <div class="actions form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit 'Login', class: 'btn btn-success' %>
+        </div>
+      </div>
+  <% end %>
+</div>

@@ -43,7 +43,7 @@ And I click link "Remove"
 Then my current page should be "/cart"
 And I should see a message styled in green
 And the message should say "Successfully removed SOME_ITEM from your cart." -->
-And the title "SOME_ITEM" should be a link to that item in case the user wants to add it back
+<!-- And the title "SOME_ITEM" should be a link to that item in case the user wants to add it back -->
 <!-- And I should not see the item listed in cart -->
 
 <!-- ## Story 6: Adjusting the quantity of an item in the cart
@@ -105,7 +105,7 @@ And I should see my profile information
 And I should not see a link for "Login"
 And I should see a link for "Logout" -->
 
-## Story 10: Guest User
+<!-- ## Story 10: Guest User
 
 As a visitor when I have items in my cart
 And when I visit "/cart"
@@ -113,7 +113,7 @@ I should not see an option to "Checkout"
 I should see an option to "Login or Create Account to Checkout"
 After I create an account
 And I visit "/cart
-Then I should see all of the data that was there when I was not logged in
+Then I should see all of the data that was there when I was not logged in -->
 
 <!-- ## Story 11: User Can Log Out
 
@@ -174,16 +174,16 @@ And my current page should be "/orders"
 And I should see a message "Order was successfully placed"
 And I should see the order I just placed in a table -->
 
-## Story 16: Authenticated users security
+<!-- ## Story 16: Authenticated users security
 
 Background: An authenticated user
 
 As an Authenticated User
 I cannot view another user's private data (current or past orders, etc)
 I cannot view the administrator screens or use admin functionality
-I cannot make myself an admin
+I cannot make myself an admin -->
 
-## Story 17: Unauthenticated users security
+<!-- ## Story 17: Unauthenticated users security
 
 Background: An unauthenticated user and their abilities
 
@@ -191,9 +191,9 @@ As an Unauthenticated User
 I cannot view another user's private data, such as current order, etc.
 I should be redirected to login/create account when I try to check out.
 I cannot view the administrator screens or use administrator functionality.
-I cannot make myself an administrator.
+I cannot make myself an administrator. -->
 
-## Story 18: Admin User Dashboard
+<!-- ## Story 18: Admin User Dashboard
 
 As a logged in Admin
 When I visit "/admin/dashboard"
@@ -205,22 +205,22 @@ I get a 404
 
 As an unregistered user
 When I visit "/admin/dashboard"
-I get a 404
+I get a 404 -->
 
-## Story 19: Admin logs in
+<!-- ## Story 19: Admin logs in
 
 As an Admin
 When I log in
-Then I am redirected to "/admin/dashboard"
+Then I am redirected to "/admin/dashboard" -->
 
-## Story 20: Admin cannot modify users
+<!-- ## Story 20: Admin cannot modify users
 
 As a logged in Admin
 I can modify my account data
 
-But I cannot modify any other user's account data
+But I cannot modify any other user's account data -->
 
-## Story 21: Admin Orders
+<!-- ## Story 21: Admin Orders
 
 As an Admin
 When I visit the dashboard
@@ -231,9 +231,9 @@ And I can filter orders to display by each status type  **("Ordered", "Paid", "C
 And I have links to transition between statuses
 - I can click on "cancel" on individual orders which are "paid" or "ordered"
 - I can click on "mark as paid" on orders that are "ordered"
-- I can click on "mark as completed" on orders that are "paid"
+- I can click on "mark as completed" on orders that are "paid" -->
 
-## Story 22: Admin views an individual Order
+<!-- ## Story 22: Admin views an individual Order
 
 As an authenticated Admin, when I visit an individual order page
 Then I can see the order's date and time.
@@ -244,9 +244,9 @@ And I can see, for each item on the order:
   - Price
   - Line item subtotal.
 And I can see the total for the order.
-And I can see the status for the order.
+And I can see the status for the order. -->
 
-## Story 23: Admin Item Creation
+<!-- ## Story 23: Admin Item Creation
 
 As an authenticated Admin:
 I can create an item.
@@ -254,10 +254,10 @@ I can create an item.
 - An item must belong to at least one category.
 - The title and description cannot be empty.
 - The title must be unique for all items in the system.
-- The price must be a valid decimal numeric value and greater than zero.
+- The price must be a valid decimal numeric value and greater than zero. -->
 - The photo is optional. If not present, a stand-in photo is used. **(PAPERCLIP)**
 
-## Story 24: Admin Viewing items
+<!-- ## Story 24: Admin Viewing items
 
 As an Admin
 When I visit "/admin/dashboard"
@@ -270,14 +270,14 @@ And each item should have:
 - Title that links to the item
 - Description
 - Status
-- Actions (Edit)
-
+- Actions (Edit) -->
+<!--
 ## Story 25: Admin edits an item
 
 Background: an existing item
 
 As an admin
 When I visit "admin/items"
-And I click "Edit"
+And I click "Edit" -->
 Then my current path should be "/admin/items/:ITEM_ID/edit"
 And I should be able to update title, description, image, and status
