@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
 
   resources :users, only: [:new, :create]
-  resources :items, only: [:index, :show, :create]
+  resources :items, only: [:index, :show, :create, :update]
   resources :categories, only: [:index, :show]
 
   namespace :admin do

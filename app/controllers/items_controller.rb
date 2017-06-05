@@ -22,8 +22,23 @@ class ItemsController < ApplicationController
     end
   end
 
+  def update
+    @item = Item.find(params[:id])
+    @item.update(item_params)
+    if @item.save
+      flash[:item_updated] = "You successfully updated #{@item.name}."
+      redirect_to admin_items_path
+    else
+      flash[:item_update_failure] = "Error. Item #{@item.name} not updated."
+      redirect_to request.referrer
+    end
+  end
+
   private
 
   def item_params
+  params[:item][:price] = params[:item][:price].to_i
+  params[:item][:category_id] = Category.find(params[:item][:category_id].to_i).id
+  params.require(:item).permit(:name, :description, :price, :category_id)
   end
 end
