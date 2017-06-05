@@ -37,7 +37,7 @@ RSpec.describe "admin can edit items" do
 
     visit categories_path
     click_on "Food"
-    
+
     expect(page).to have_content("#{item.name}")
   end
 end
