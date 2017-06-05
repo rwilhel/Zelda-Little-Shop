@@ -76,7 +76,7 @@ def create_items_for_category_munitions
       Item.create!(name: item[0],
       description: item[1],
       price: item[2],
-      category_id: Category.find_by(name: "General Goods").id)
+      category_id: Category.find_by(name: "Munitions").id)
       puts "Creating item: #{item[0]} for General Goods Category"
     end
   end

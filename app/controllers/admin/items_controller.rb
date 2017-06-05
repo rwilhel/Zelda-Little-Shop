@@ -11,7 +11,7 @@ class Admin::ItemsController < Admin::BaseController
 
   def edit
     @user = current_user
-    @item = Item.find(params[:id])
+    @item = Item.find_by(slug: params[:id])
   end
 
 end

@@ -17,15 +17,19 @@ ActiveRecord::Schema.define(version: 20170601223404) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.string "slug"
+    t.index ["slug"], name: "index_categories_on_slug", unique: true
   end
 
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "price"
+    t.string "slug"
     t.boolean "status", default: true
     t.bigint "category_id"
     t.index ["category_id"], name: "index_items_on_category_id"
+    t.index ["slug"], name: "index_items_on_slug", unique: true
   end
 
   create_table "orders", force: :cascade do |t|

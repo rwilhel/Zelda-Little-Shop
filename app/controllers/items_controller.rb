@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
+    @item = Item.find_by(slug: params[:id])
   end
 
   def create
@@ -23,7 +23,7 @@ class ItemsController < ApplicationController
   end
 
   def update
-    @item = Item.find(params[:id])
+    @item = Item.find_by(slug: params[:id])
     @item.update(item_params)
     if @item.save
       flash[:item_updated] = "You successfully updated #{@item.name}."
