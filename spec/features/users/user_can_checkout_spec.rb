@@ -1,14 +1,6 @@
 require 'rails_helper'
 
 
-## Story 12: Viewing past orders
-
-# Background: An existing user that has multiple orders
-#
-# As an Authenticated User
-# When I visit "/orders"
-# Then I should see all orders belonging to me and no other orders
-
 RSpec.describe 'as a logged in user can checkout' do
   it 'user can checkout an order' do
     user = create(:user)

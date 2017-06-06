@@ -11,6 +11,7 @@ class Patron::OrdersController < Patron::BaseController
       # replicate save method with your own method. Possible refactor.
       create_join_table_entries(@order)
       flash[:order_success] = "Order was successfully placed"
+      session[:cart] = nil
       redirect_to patron_orders_path
     else
       flash[:cart_error] = "Order could not be placed."
@@ -24,7 +25,7 @@ class Patron::OrdersController < Patron::BaseController
   end
 
   private
-  
+
   def create_join_table_entries(order)
     @cart = session[:cart]
     @cart.each_pair do |item, quantity|
