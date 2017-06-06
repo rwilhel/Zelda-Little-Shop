@@ -65,3 +65,22 @@ div.page-header h2 {
     font-family: Triforce;
     color: whitesmoke;
 }
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+* {
+
+    border: 1px solid red !important;
+}
