@@ -26,7 +26,8 @@ def create_items_for_category_potions
     Item.create!(name: item[0],
                   description: item[1],
                   price: item[2],
-                  category_id: Category.find_by(name: "Potions").id)
+                  category_id: Category.find_by(name: "Potions").id,
+                  avatar: File.new("app/assets/images/shield_item.png"))
     puts "Creating item: #{item[0]} for Potions Category"
   end
 end
@@ -42,7 +43,8 @@ def create_items_for_category_general_goods
     Item.create!(name: item[0],
                   description: item[1],
                   price: item[2],
-                  category_id: Category.find_by(name: "General Goods").id)
+                  category_id: Category.find_by(name: "General Goods").id,
+                  avatar: File.new("app/assets/images/shield_item.png"))
     puts "Creating item: #{item[0]} for General Goods Category"
   end
 end
@@ -60,7 +62,8 @@ def create_items_for_category_storage
     Item.create!(name: item[0],
                   description: item[1],
                   price: item[2],
-                  category_id: Category.find_by(name: "Storage").id)
+                  category_id: Category.find_by(name: "Storage").id,
+                  avatar: File.new("app/assets/images/shield_item.png"))
     puts "Creating item: #{item[0]} for Storage Category"
   end
 end
@@ -76,7 +79,8 @@ def create_items_for_category_munitions
       Item.create!(name: item[0],
       description: item[1],
       price: item[2],
-      category_id: Category.find_by(name: "Munitions").id)
+      category_id: Category.find_by(name: "Munitions").id,
+      avatar: File.new("app/assets/images/shield_item.png"))
       puts "Creating item: #{item[0]} for General Goods Category"
     end
   end
@@ -94,7 +98,8 @@ def create_items_for_category_equipment
     Item.create!(name: item[0],
                   description: item[1],
                   price: item[2],
-                  category_id: Category.find_by(name: "Equipment").id)
+                  category_id: Category.find_by(name: "Equipment").id,
+                  avatar: File.new("app/assets/images/shield_item.png"))
     puts "Creating item: #{item[0]} for Equipment Category"
   end
 end
@@ -106,7 +111,8 @@ def create_items_for_category_key_items
     Item.create!(name: item[0],
                   description: item[1],
                   price: item[2],
-                  category_id: Category.find_by(name: "Key Items").id)
+                  category_id: Category.find_by(name: "Key Items").id,
+                  avatar: File.new("app/assets/images/shield_item.png"))
     puts "Creating item: #{item[0]} for Key Items Category"
   end
 end

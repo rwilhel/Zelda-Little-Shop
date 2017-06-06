@@ -6,6 +6,7 @@
 
 <div class="container">
   <% @items.each do |item| %>
+  <%= image_tag item.avatar.url(:medium) %>
     <%= link_to item.name, item_path(item) %><br>
     Price: <%= item.price %> Rupees <br>
     <% if item.retired_item? == false %>

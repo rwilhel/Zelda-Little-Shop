@@ -6,6 +6,7 @@
 </div>
 <div class="container">
   <% @items.each do |item| %>
+  <%= image_tag item.avatar.url(:medium) %><br>
     <%= link_to item.name, item_path(item) %>
     <% if item.retired_item? == false %>
       <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-danger btn-xs" %>
