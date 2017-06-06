@@ -6,6 +6,7 @@ class ItemsController < ApplicationController
 
   def show
     @item = Item.find_by(slug: params[:id])
+    @status = @item.in_stock?
   end
 
   def create

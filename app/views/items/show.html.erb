@@ -1,9 +1,12 @@
-
-<h2><%= @item.name %></h2>
-<%= image_tag @item.avatar.url %>
-
-<% if @item.retired_item? %>
-  <%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-danger btn-xs" %>
+<div class="page-header">
+<div class="container">
+  <h2><%= @item.name %></h2>
+</div>
+</div>
+<h2>Price: <%= @item.price %> Rupees </h2>
+<%= image_tag @item.avatar.url %><br>
+<h3>In Stock? <%= @status %></h3>
+<% if @item.retired_item? == false %>
+<%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-danger btn-xs" %><br>
 <% end %>
-<h3>Active? <%= @item.status %></h3>
-<%= link_to "Back to all items", items_path %>
+<%= link_to "Back to all items", items_path, class: "btn btn-danger btn-xs" %>
