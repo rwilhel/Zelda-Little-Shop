@@ -24,6 +24,7 @@ class Patron::OrdersController < Patron::BaseController
   end
 
   private
+  
   def create_join_table_entries(order)
     @cart = session[:cart]
     @cart.each_pair do |item, quantity|
