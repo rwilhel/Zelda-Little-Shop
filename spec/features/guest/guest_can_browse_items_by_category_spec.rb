@@ -22,7 +22,7 @@ RSpec.describe "guest can browse categories" do
     visit categories_path
     click_on "Potions"
 
-    expect(current_path).to eq("/categories/#{category.id}")
+    expect(current_path).to eq("/categories/#{category.name.downcase}")
     expect(page).to have_content("#{item1.name}")
     expect(page).to have_content("#{item2.name}")
   end

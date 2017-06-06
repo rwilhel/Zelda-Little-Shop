@@ -28,9 +28,9 @@ RSpec.describe "When an authenticated user visits a retired item's page" do
     visit items_path
 
     click_on "Blue Potion"
-    expect(current_path).to eq("/items/#{item2.id}")
+    expect(current_path).to eq("/items/blue-potion")
     expect(page).to_not have_content("Add to Cart")
-    expect(page).to have_content("Active? false")
+    expect(page).to have_content("In Stock? No")
   end
 
   it "can not view the Add to Cart for a retired item" do
@@ -89,6 +89,6 @@ RSpec.describe "When an authenticated user visits a retired item's page" do
     visit items_path
 
     click_on "Blue Potion"
-    expect(current_path).to eq("/items/#{item2.id}")
+    expect(current_path).to eq("/items/blue-potion")
   end
 end

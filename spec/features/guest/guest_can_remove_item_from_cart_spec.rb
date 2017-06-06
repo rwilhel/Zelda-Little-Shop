@@ -14,6 +14,6 @@ RSpec.describe "guest can remove item from cart" do
     expect(page).to have_content("Succesfully Removed #{item.name} from cart")
     expect(page).to_not have_content("5")
     click_on "#{item.name}"
-    expect(current_path).to eq("/items/#{item.id}")
+    expect(current_path).to eq("/items/red-potion")
   end
 end
