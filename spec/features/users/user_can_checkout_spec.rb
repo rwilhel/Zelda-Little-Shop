@@ -16,7 +16,7 @@ RSpec.describe 'as a logged in user can checkout' do
     fill_in 'Password', with: 'password'
     click_on 'Login'
 
-    click_on "All Items"
+    click_on "Items"
 
     click_on "Add #{item1.name} to Cart"
     click_on "Add #{item1.name} to Cart"

@@ -9,7 +9,6 @@ RSpec.describe "guest can browse categories" do
     click_on "Categories"
 
     expect(current_path).to eq("/categories")
-    expect(page).to have_content("All Categories")
     expect(page).to have_content("Potions")
     expect(page).to have_content("Bombs")
   end
