@@ -38,6 +38,6 @@ RSpec.describe "user sees total spent on profile page" do
       click_on 'Checkout'
 
       click_on "Account"
-
+      expect(page).to have_content(16)
   end
 end

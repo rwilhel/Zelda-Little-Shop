@@ -3,6 +3,7 @@ class Patron::UsersController < Patron::BaseController
   def show
     @user = current_user
     @orders = Order.where(user_id: @user.id).count
+    @total = Cart.new(Order.where(user_id: @user.id)).total_spent
   end
 
   def edit

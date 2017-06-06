@@ -6,7 +6,7 @@
   <h3>Username: <%= @user.username  %> </h3>
   <h3>Location: <%= @user.location %> </h3>
   <h4>Orders Placed: <%= @orders %></h4>
-  <h4>Money Spent at Store: </h4>
+  <h4>Money Spent at Store: <%= @total %> </h4>
 
   <%= link_to "Edit Profile", edit_patron_user_path(@user) %>
 </div>
