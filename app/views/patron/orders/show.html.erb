@@ -10,13 +10,14 @@
   <% total = []  %>
   <h2>Items Ordered</h2>
   <%  @line_items.each do |oi| %>
-  <% item = Item.find(oi.item_id)  %>
-  Name: <%= item.name  %><br>
-  Quantity:<%= oi.quantity %><br>
-  <% subtotal = (item.price) * oi.quantity %>
-  <% total << subtotal  %>
-  Subtotal: <%= subtotal %><br>
-  <br><br>
+    <% item = Item.find(oi.item_id)  %>
+    <%= image_tag item.avatar.url %><br>
+    Name: <%= item.name  %><br>
+    Quantity:<%= oi.quantity %><br>
+    <% subtotal = (item.price) * oi.quantity %>
+    <% total << subtotal  %>
+    Subtotal: <%= subtotal %><br>
+    <br><br>
   <%end  %>
   Total: <%= total.reduce(:+)  %>
 </div>
