@@ -50,7 +50,6 @@ RSpec.describe "user cannot see other users info" do
     click_button 'Login'
 
     visit patron_user_path(maboy)
-    save_and_open_page
     expect(current_path).to eq("/patron/users/#{maboy.id}")
     expect(page).to_not have_content("Lank")
   end
