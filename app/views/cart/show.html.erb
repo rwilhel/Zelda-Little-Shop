@@ -1,20 +1,30 @@
-<% @cart.each_pair do |item, quantity|  %>
-  <% item = Item.find(item)  %>
-  <%= item.name  %>
-  <%= item.price  %>
-  <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
-  <%= quantity %>
-  <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
-  <%= link_to "Remove", cart_path(item_id: item.id), method: :put, class: "remove_link" %>
+<div class="page-header">
+  <div class="container">
+    <h2>Cart</h2>
+  </div>
+</div>
+<div class="container">
+  <% if @status == false %>
+  <%= link_to "Add an item to your cart!", items_path %>
+  <% else %>
+    <% @cart.each_pair do |item, quantity|  %>
+      <% item = Item.find(item)  %>
+      <%= item.name  %>
+      <%= item.price  %>
+      <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
+      <%= quantity %>
+      <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
+      <%= link_to "Remove", cart_path(item_id: item.id), method: :put, class: "remove_link" %>
+    <% end %>
   <% end %>
-
   <h3>Total: <%= @total %> Rupees</h3>
 
-<% if current_patron? %>
-  <h2><%= link_to 'Checkout', new_patron_order_path %></h2>
-<% else %>
+  <% if current_patron? %>
+    <h2><%= link_to 'Checkout', new_patron_order_path %></h2>
+  <% else %>
     <div class="containter">
-        <%= link_to "Login", login_path %> or
-        <%= link_to "Create Account", new_user_path %> to Checkout
+      <%= link_to "Login", login_path %> or
+      <%= link_to "Create Account", new_user_path %> to Checkout
     </div>
-<% end %>
+  <% end %>
+</div>

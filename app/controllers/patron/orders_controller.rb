@@ -1,7 +1,8 @@
 class Patron::OrdersController < Patron::BaseController
 
   def index
-    @orders = Order.where(user_id: current_user.id)
+    @open_orders = Order.where(user_id: current_user.id, status: "Ordered")
+    @closed_orders = Order.where(user_id: current_user.id, status: "Completed")
   end
 
   def new

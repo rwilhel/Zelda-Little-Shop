@@ -1,4 +1,18 @@
-  <% @orders.each do |order| %>
+<div class="page-header">
+  <div class="container">
+    <h2>Open Orders</h2>
+  </div>
+</div>
+  <% @open_orders.each do |order| %>
+  <%= link_to "Order: #{order.id}", patron_order_path(order.id) %>
+  <br>
+  <% end %>
+<div class="page-header">
+  <div class="container">
+    <h2>Past Orders</h2>
+  </div>
+</div>
+  <% @closed_orders.each do |order| %>
   <%= link_to "Order: #{order.id}", patron_order_path(order.id) %>
   <br>
   <% end %>

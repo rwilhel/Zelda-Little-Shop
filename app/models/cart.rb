@@ -35,4 +35,10 @@ class Cart
     total.reduce(:+)
   end
 
+  def valid
+    if contents == {}
+      false
+    end
+  end
+
 end
