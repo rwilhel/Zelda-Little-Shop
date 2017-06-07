@@ -1,14 +1,18 @@
+@font-face {
+    font-family: "Triforce";
+    src: url(/assets/Triforce.ttf) format("truetype");
+}
+
+/*@font-face {
+    font-family: "Sherwood";
+    src: url(/assets/SherwoodRegular.ttf) format("truetype");
+}*/
 
 /******* BASIC ********/
 
 body {
  background: url("dark_green_wallpaper.png");
-}
-
-@font-face {
-    font-family: 'Triforce';
-    src: local('fonts/Triforce.ttf');
-    format('truetype');
+ font-family: "Triforce";
 }
 
 /******* NAV BAR********/
