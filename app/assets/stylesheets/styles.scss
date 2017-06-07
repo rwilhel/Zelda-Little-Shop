@@ -93,6 +93,37 @@ div.page-header h2 {
 
 }
 
+
+/** {
+
+    border: 1px solid red !important;
+}*/
+
+/*******ITEMS JUMBOTRON********/
+
+.jumbolink a {
+  text-decoration: none !important;
+}
+
+.jumbotron {
+  background-image: url('/assets/goron-shop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background: contain;
+  margin: auto;
+  max-width: 1000px;
+  height: 300px;
+  box-shadow: 0px 0px 3px 5px #f2e1f2;
+  margin-top: 10%;
+}
+
+.caption h2 {
+  font-size: 63px;
+  text-align: center;
+  color: white;
+  padding-top: 7%;
+}
+
 /******* CART  ********/
 
 div.session {
@@ -165,12 +196,9 @@ div.button_plus {
   color: #8a6d3b;
   text-decoration: none;
 }
-/** {*/
 
 #card-list p {
   color: whitesmoke;
 }
 
-    /*border: 1px solid red !important;*/
-/*}*/
 
