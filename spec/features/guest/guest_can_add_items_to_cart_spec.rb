@@ -35,11 +35,10 @@ RSpec.describe "visitor can add item to cart" do
     click_on "Add #{item_1.name} to Cart"
 
     click_on "Cart"
-    expect(page).to have_content("1")
+    expect(page).to have_content("#{item_1.name}")
     click_button "+"
-    expect(page).to have_content("2")
     click_button "+"
-    expect(page).to have_content("3")
+    expect(page).to have_content("6")
   end
 
   it "can decrease quantity for specific item in the cart show" do
@@ -50,15 +49,12 @@ RSpec.describe "visitor can add item to cart" do
     click_on "Add #{item_1.name} to Cart"
 
     click_on "Cart"
-    expect(page).to have_content("1")
+    expect(page).to have_content("#{item_1.name}")
     click_button "+"
-    expect(page).to have_content("2")
     click_button "+"
-    expect(page).to have_content("3")
+    click_button "-"
     click_button "-"
     expect(page).to have_content("2")
-    click_button "-"
-    expect(page).to have_content("1")
   end
 
   it "can see total price" do
