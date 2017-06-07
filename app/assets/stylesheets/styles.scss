@@ -3,10 +3,8 @@
     src: url(/assets/Triforce.ttf) format("truetype");
 }
 
-/*@font-face {
-    font-family: "Sherwood";
-    src: url(/assets/SherwoodRegular.ttf) format("truetype");
-}*/
+//@import "font-awesome";
+
 
 /******* BASIC ********/
 
@@ -40,7 +38,9 @@ div.session {
     margin-top: 10%;
 }
 
-
+p.navbar-text.navbar-left {
+    color: whitesmoke;
+}
 
 /******* CATEGORIES ICONS  ********/
 
@@ -84,7 +84,24 @@ div.page-header h2 {
     justify-content: flex-end;
 
 }
-* {
+//* {
+//
+//    border: 1px solid red !important;
+//}
 
-    border: 1px solid red !important;
+
+/******* CART  ********/
+
+div.session {
+    color: whitesmoke;
+}
+table#cart {
+    background-color: whitesmoke;
+}
+
+
+/******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
+
+.patron-profile {
+    color: whitesmoke;
 }
