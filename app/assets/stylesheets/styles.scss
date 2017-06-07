@@ -15,6 +15,10 @@ body {
  font-family: "Triforce";
 }
 
+.page-header {
+  color: whitesmoke;
+}
+
 /******* NAV BAR********/
 
 nav.navbar.navbar-default.navbar-fixed-top {
@@ -84,7 +88,63 @@ div.page-header h2 {
     justify-content: flex-end;
 
 }
+
+/******* ITEMS INDEX PAGE  ********/
+
+#card-list {
+    font-family: arial;
+    width: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    .items {
+        float: left;
+        width: 30%;
+        border: 1px solid #ccc;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        margin-left: 1.75438%;
+        overflow: hidden;
+    &:first-child {
+    margin-left: 0;
+     }
+    figure{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        display: block;
+    img{
+        width: 100%;
+        height: auto;
+    }
+    figcaption{
+        padding: 10px;
+        margin: 0;
+        display: block;
+    }
+   }
+  }
+ }
+
+#card-list a{
+  color: whitesmoke;
+}
+
+
+#card-list a:hover {
+  color: #8a6d3b;
+  text-decoration: none;
+}
 /** {*/
+
+#card-list p {
+  color: whitesmoke;
+}
 
     /*border: 1px solid red !important;*/
 /*}*/
