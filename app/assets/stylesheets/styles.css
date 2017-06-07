@@ -84,7 +84,7 @@ div.page-header h2 {
     justify-content: flex-end;
 
 }
-* {
+/** {*/
 
-    border: 1px solid red !important;
-}
+    /*border: 1px solid red !important;*/
+/*}*/
