@@ -28,4 +28,5 @@ RSpec.describe Cart, type: :model do
     expect(cart.quantity_for("#{item.id}")).to eq(2)
     expect(cart.quantity_for("#{item.id}")).to eq(2)
   end
+  
 end
