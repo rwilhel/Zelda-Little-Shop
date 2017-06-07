@@ -88,3 +88,21 @@ div.page-header h2 {
 
     border: 1px solid red !important;
 }
+
+/*******ITEMS JUMBOTRON********/
+
+.jumbotron {
+  background-image: url('/assets/goron-shop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background: contain;
+  margin: auto;
+  max-width: 1000px;
+  height: 300px;
+}
+
+div.caption h1 {
+  font-size: 63px;
+  text-align: center;
+  color: white;
+}
