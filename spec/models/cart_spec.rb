@@ -18,15 +18,14 @@ RSpec.describe Cart, type: :model do
                   price: 10,
                   category_id: category.id)
 
-    purse = {"1" => 2, "2" => 3}
+    purse = {"#{item.id}" => 2, "#{item2.id}" => 3}
     cart = Cart.new(purse)
-    cart.add_item("1")
-    cart.increase_quantity("2")
-    cart.decrease_quantity("1")
-    cart.add_item("3")
+    cart.add_item("#{item.id}")
+    cart.increase_quantity("#{item2.id}")
+    cart.decrease_quantity("#{item.id}")
+    cart.add_item("#{item3.id}")
     expect(cart.total).to eq(70)
-    expect(cart.quantity_for("1")).to eq(2)
-    expect(cart.quantity_for("2")).to eq(4)
+    expect(cart.quantity_for("#{item.id}")).to eq(2)
+    expect(cart.quantity_for("#{item.id}")).to eq(2)
   end
-
 end
