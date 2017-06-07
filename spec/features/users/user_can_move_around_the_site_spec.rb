@@ -31,7 +31,7 @@ RSpec.describe "User can move everywhere they should be a" do
     expect(user.patron?).to eq(true)
     expect(current_path).to eq('/patron/orders')
     expect(page).to have_content('Order was successfully placed')
-    
+
     expect(current_path).to eq('/patron/orders')
     expect(page).to have_content("Order: #{order1.id}")
 
@@ -40,5 +40,35 @@ RSpec.describe "User can move everywhere they should be a" do
 
     click_on "Cart"
     expect(page).to_not have_content("#{item1.name}")
+
+    visit categories_path
+    click_on "Potions"
+    expect(current_path).to eq('/categories/potions')
+
+    click_on "Account"
+    expect(page).to have_content("#{user.username}")
+    click_on "Orders"
+
+    expect(page).to have_content("Order: #{order1.id}")
+
+    click_on "Items"
+
+    click_on "Add #{item1.name} to Cart"
+    click_on "Add #{item1.name} to Cart"
+    click_on "Add #{item2.name} to Cart"
+    click_on "Add #{item3.name} to Cart"
+
+
+    click_on 'Cart'
+    click_on 'Checkout'
+
+    expect(user.role).to eq('patron')
+    expect(user.patron?).to eq(true)
+    expect(current_path).to eq('/patron/orders')
+    expect(page).to have_content('Order was successfully placed')
+
+    expect(current_path).to eq('/patron/orders')
+    expect(page).to have_content("Order: #{order1.id}")
+
   end
 end
