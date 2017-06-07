@@ -91,6 +91,10 @@ div.page-header h2 {
 
 /*******ITEMS JUMBOTRON********/
 
+.jumbolink a {
+  text-decoration: none !important;
+}
+
 .jumbotron {
   background-image: url('/assets/goron-shop.png');
   background-repeat: no-repeat;
