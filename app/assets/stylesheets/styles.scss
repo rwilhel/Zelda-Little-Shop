@@ -54,6 +54,7 @@ div.caption {
 }
 div.caption h3 {
     color: whitesmoke;
+    text-shadow: 2px 2px 10px #000000;
 }
 div.thumbnail {
     background-color: transparent;
@@ -68,6 +69,8 @@ div.page-header h2 {
     text-transform: uppercase;
     font-family: Triforce;
     color: whitesmoke;
+    font-size: 40px;
+    text-shadow: 4px 4px 20px #000000;
 }
 
 
@@ -109,15 +112,13 @@ div.page-header h2 {
 }
 
 .caption h2 {
-  font-size: 63px;
+  font-size: 60px;
   text-align: center;
   color: white;
   padding-top: 7%;
-
-//* {
-//
-//    border: 1px solid red !important;
-//}
+  font-family: Triforce;
+  text-shadow: 4px 4px 20px #000000;
+}
 
 
 /******* CART  ********/
