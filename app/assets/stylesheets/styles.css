@@ -84,10 +84,10 @@ div.page-header h2 {
     justify-content: flex-end;
 
 }
-* {
+/** {
 
     border: 1px solid red !important;
-}
+}*/
 
 /*******ITEMS JUMBOTRON********/
 
@@ -99,10 +99,13 @@ div.page-header h2 {
   margin: auto;
   max-width: 1000px;
   height: 300px;
+  box-shadow: 0px 0px 3px 5px #f2e1f2;
+  margin-top: 10%;
 }
 
-div.caption h1 {
+.caption h2 {
   font-size: 63px;
   text-align: center;
   color: white;
+  padding-top: 7%;
 }
