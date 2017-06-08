@@ -1,49 +1,327 @@
+@font-face {
+  font-family: "Triforce";
+  src: url(/assets/Triforce.ttf) format("truetype");
+}
+/******* BASIC ********/
+/* line 8, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+body {
+  background: url("dark_green_wallpaper.png");
+  font-family: "Triforce";
+}
 
+/* line 13, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+a {
+  text-decoration: none !important;
+}
 
+/******* NAV BAR********/
+/* line 19, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 nav.navbar.navbar-default.navbar-fixed-top {
-    background-color: #0d9263;
-    margin-bottom: auto;
+  background-color: #0d9263;
+  margin-bottom: auto;
+  font-family: "Triforce";
+  font-size: 30px;
 }
 
+/* line 26, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 nav.navbar-default .navbar-nav > li > a {
-    color: whitesmoke;
+  color: whitesmoke;
 }
+
+/* line 31, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.order-index {
+  text-align: center;
+  font-family: Triforce;
+  color: white;
+  font-size: 35px;
+}
+
+/* line 37, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 .item-container {
-  margin-top: 7%
+  margin-top: 7%;
 }
+
+/* line 40, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 .patron-profile {
   margin-top: 7%;
 }
 
-.login-background {
-  background-image: url("login_background.png");
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-  z-index: 10;
-}
-
-.login {
-  top: 70%;
-  left: 40%;
-  position: absolute;
-}
-
-.hidden{
-  display: none;
-}
-.container-session {
-  margin-top: 6%;
-}
-
+/* line 44, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 nav.navbar-default .navbar-brand {
-    color: white;
+  color: white;
+  font-family: "Triforce";
+  font-size: 25px;
 }
 
+/* line 50, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+a.navbar-brand.navbar-left.logo {
+  color: white;
+  font-family: "Triforce";
+  font-size: 35px;
+}
+
+/* line 56, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
 div.session {
-    margin-top: 10%;
+  margin-top: 10%;
+}
+
+/* line 60, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+p.navbar-text.navbar-left {
+  color: whitesmoke;
+}
+
+/******* CATEGORIES ICONS  ********/
+/* line 66, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.thumbnail {
+  border: none;
+}
+
+/* line 70, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.caption {
+  text-align: center;
+  font-family: Triforce;
+}
+
+/* line 74, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.caption h3 {
+  color: whitesmoke;
+  text-shadow: 2px 2px 10px #000000;
+}
+
+/* line 78, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.thumbnail {
+  background-color: transparent;
+}
+
+/* line 82, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.thumbnail img {
+  width: 50%;
+}
+
+/* line 86, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.page-header h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Triforce;
+  color: white;
+  font-size: 40px;
+  text-shadow: 4px 4px 20px #000000;
+  margin-top: 10%;
+}
+
+/* line 96, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.page-header h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Triforce;
+  color: white;
+  font-size: 40px;
+  text-shadow: 4px 4px 20px #000000;
+  margin-top: 5%;
+}
+
+/* line 107, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* line 113, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.category {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/*******ITEMS JUMBOTRON********/
+/* line 122, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.jumbolink a {
+  text-decoration: none !important;
+}
+
+/* line 126, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.jumbotron {
+  background-image: url("/assets/goron-shop.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background: contain;
+  margin: auto;
+  max-width: 1000px;
+  height: 300px;
+  box-shadow: 0px 0px 3px 5px #f2e1f2;
+  margin-top: 8%;
+}
+
+/* line 138, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.caption h2 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  padding-top: 7%;
+  font-family: Triforce;
+  text-shadow: 4px 4px 20px #000000;
+}
+
+/******* CART  ********/
+/* line 150, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.session {
+  color: whitesmoke;
+}
+
+/* line 154, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+table#cart {
+  background-color: whitesmoke;
+}
+
+/* line 158, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+div.button_plus {
+  width: 5%;
+}
+
+/******* ALL ITEMS  ********/
+/* line 164, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.container-items {
+  padding-top: 35px;
+}
+
+/* line 168, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.container-items h1 {
+  font-size: 60px;
+  font-family: "Triforce";
+  text-shadow: 4px 4px 20px #000000;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* line 176, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list {
+  font-family: arial;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+/* line 186, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items {
+  float: left;
+  width: 20%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+  overflow: hidden;
+  justify-content: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+/* line 199, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items:first-child {
+  margin-left: 0;
+}
+/* line 203, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items figure {
+  width: auto;
+  height: 200px;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+/* line 210, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items figure img.product {
+  margin-left: 20%;
+}
+/* line 214, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items figure figcaption {
+  padding: 10px;
+  margin: 0;
+  display: block;
+  text-align: center;
+}
+
+/* line 224, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list a {
+  color: whitesmoke;
+}
+
+/* line 228, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list a:hover {
+  color: #8a6d3b;
+  text-decoration: none;
+}
+
+/* line 233, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list p {
+  color: whitesmoke;
+}
+
+/* line 237, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#card-list .items figure img {
+  width: auto;
+  height: 100px;
+}
+
+/******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
+/******* ACCOUNT PROFILE PAGE  ********/
+/* line 247, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.list-group-item {
+  color: #666666;
+}
+
+/* line 251, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.patron-profile a {
+  margin-bottom: 2%;
+}
+
+/* line 256, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.patron-profile .edit a {
+  margin-top: 2%;
+}
+
+/* line 260, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.btn-success {
+  margin-top: 2%;
+}
+
+/* line 264, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.page-header.admin {
+  margin-top: 10%;
+}
+
+/* line 268, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.admin.btn-toolbar {
+  display: inline-block;
+}
+
+/******* ORDER SHOW PAGE  ********/
+/* line 274, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.order-show {
+  color: white;
+  font-family: Triforce;
+}
+
+/******* ADMIN ORDERS INDEX ********/
+/* line 281, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.admin-orders {
+  margin-top: 10%;
+  color: white;
+}
+
+/* line 286, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+.admin-account-page {
+  margin-top: 10%;
+  color: white;
+  font-family: Triforce;
+}
+
+/******* DASHBOARD ********/
+/* line 295, /Users/crichmond/OneDrive/School/Turing School/workspace/turing_class/module2/projects/little-shop/app/assets/stylesheets/styles.scss */
+#category-head {
+  margin-top: -5%;
 }
 @charset "UTF-8";
 /*
@@ -57,7 +335,6 @@ div.session {
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
 
 
  */
