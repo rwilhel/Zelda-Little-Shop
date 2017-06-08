@@ -132,6 +132,23 @@ div.button_plus {
 
 /******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
 
-.patron-profile {
-    color: whitesmoke;
+
+/******* ACCOUNT PROFILE PAGE  ********/
+
+.list-group-item {
+  color: #666666;
 }
+
+.patron-profile a {
+  margin-bottom: 2%;
+}
+
+
+.patron-profile .edit a {
+  margin-top: 2%;
+}
+
+.btn-success {
+  margin-top: 2% ;
+}
+
