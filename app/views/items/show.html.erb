@@ -8,7 +8,8 @@
     <div class="col-sm-10 col-sm-offset-2">
       <div class="list-group">
         <ul class="col-md-8 list-unstyled">
-          <%= image_tag @item.avatar.url %><br>
+          <img src="<%=@item.show%>">
+          <!-- <%= image_tag @item.avatar.url %><br> -->
           <li class="list-group-item"><strong>Description:</strong><%= @item.description %></li>
           <li class="list-group-item"><strong>Price:</strong><%= @item.price %> Rupees</li>
           <li class="list-group-item"><strong>In Stock? </strong><%= @status %></li>
