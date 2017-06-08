@@ -3,10 +3,12 @@
     <h2>Open Orders</h2>
   </div>
 </div>
+<div class="order-index">
   <% @open_orders.each do |order| %>
   <%= link_to "Order: #{order.id}", patron_order_path(order.id) %>
   <br>
   <% end %>
+</div>
 <div class="page-header">
   <div class="container">
     <h2>Past Orders</h2>
