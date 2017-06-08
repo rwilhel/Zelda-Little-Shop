@@ -10,7 +10,6 @@ require "rails_helper"
 
 RSpec.describe "user can see past, present and future orders" do
   it "can see into the past" do
-    Order.destroy_all
     user = User.create!(username: "Linkss", password: "password")
     category = Category.create!(name: "Potions")
     item1 = Item.create!(name: "Red Potion", description: "Feeds the body", price: 2, category_id: category.id)

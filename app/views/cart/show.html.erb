@@ -3,28 +3,69 @@
     <h2>Cart</h2>
   </div>
 </div>
+
 <div class="container">
-  <% if @status == false %>
-  <%= link_to "Add an item to your cart!", items_path %>
-  <% else %>
+  <table id="cart" class="table table-hover table-condensed">
+    <thead>
+      <tr>
+        <th style="width:50%">Item</th>
+        <th style="width:10%">Price</th>
+        <th style="width:8%">Quantity</th>
+        <th style="width:10%"></th>
+      </tr>
+    </thead
+    <% if @status == false %>
+    <%= link_to "Add an item to your cart!", items_path, class: 'btn btn-default' %>
+    <% else %>
     <% @cart.each_pair do |item, quantity|  %>
-      <% item = Item.find(item)  %>
-      <%= item.name  %>
-      <%= item.price  %>
-      <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
-      <%= quantity %>
-      <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
-      <%= link_to "Remove", cart_path(item_id: item.id), method: :put, class: "remove_link" %>
-    <% end %>
-  <% end %>
-  <h3>Total: <%= @total %> Rupees</h3>
+      <tbody>
+      <tr>
+        <td data-th="Product">
+          <div class="row">
+            <div class="col-sm-2 hidden-xs"><img src="shield_item.png" alt="..." class="img-responsive"/></div>
+            <div class="col-sm-10">
+              <% item = Item.find(item)%>
+              <h4 class="nomargin"> <%=item.name%></h4>
+
+              <p><%= item.description %></p>
+            </div>
+          </div>
+        </td>
+        <td data-th="Price"><%= item.price  %></td>
+          <td data-th="Quantity">
+            <input type="number" class="" value="<%= quantity %>">
+          </td>
+          <td class="button" class="btn btn-primary btn-xs">
+            <%= button_to "-", cart_path(item_id: item.id), method: :delete, class: "button_minus" %>
+          </td>
+          <td class="button" class="btn btn-primary btn-xs">
+          <%= button_to "+", cart_path(item_id: item.id), class: "button_plus" %>
+        </td>
+        <td class="button" class="btn btn-primary btn-md">
+            <%= link_to "", cart_path(item_id: item.id), method: :put, class: "glyphicon glyphicon-trash" %>
+        </td>
+        </tr>
+        </tbody>
+        <% end %>
+        <% end %>
+        <tfoot>
+          <tr class="visible-xs">
+            <td class="text-center"><strong><%= @total %> Rupees</strong></td>
+          </tr>
+          <tr>
+            <td><a href=" <%= items_path %>" class="btn btn-warning"><i class="fa fa-angle-left"></i>Continue Shopping</a></td>
+            <td colspan="2" class="hidden-xs"></td>
+            <td class="hidden-xs text-center"><strong>Total: <%= @total %></strong></td>
+          </tr>
+          </tfoot>
+  </table>
+</div>
 
   <% if current_patron? %>
-    <h2><%= link_to 'Checkout', new_patron_order_path %></h2>
+    <h2><%= link_to 'Checkout', new_patron_order_path, class: 'btn btn-success' %></h2>
   <% else %>
-    <div class="containter">
-      <%= link_to "Login", login_path %> or
-      <%= link_to "Create Account", new_user_path %> to Checkout
+    <div class="container">
+      <%= link_to "Login", login_path, class: 'btn btn-success' %> 
+      <%= link_to "Create Account to Checkout", new_user_path , class: 'btn btn-success' %>
     </div>
   <% end %>
-</div>

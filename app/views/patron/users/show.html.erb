@@ -1,12 +1,25 @@
+<div class="page-header">
+  <div class="container">
+    <h2><%= @user.username %>'s Account Information</h2>
+  </div>
+</div>
 <div class="patron-profile">
-  <h1><%= @user.username %>'s Account Information</h1>
+  <div class="row">
+    <div class="container">
+      <div class="col-sm-10 col-sm-offset-2">
+        <div class="list-group">
+          <ul class="col-md-8 list-unstyled">
+            <%= link_to "Orders", patron_orders_path, class: 'btn btn-success orders' %>
 
-  <%= link_to "Orders", patron_orders_path %>
+            <li class="list-group-item"><strong>Username: </strong><%= @user.username  %></li>
+            <li class="list-group-item"><strong>Location: </strong><%= @user.location %></li>
+            <li class="list-group-item"><strong>Orders Placed: </strong><%= @orders %></li>
+            <li class="list-group-item"><strong>Money Spent at Store: </strong><%= @total %></li>
 
-  <h3>Username: <%= @user.username  %> </h3>
-  <h3>Location: <%= @user.location %> </h3>
-  <h4>Orders Placed: <%= @orders %></h4>
-  <h4>Money Spent at Store: <%= @total %> </h4>
-
-  <%= link_to "Edit Profile", edit_patron_user_path(@user) %>
+            <%= link_to "Edit Profile", edit_patron_user_path(@user), class: 'btn btn-success edit' %>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
