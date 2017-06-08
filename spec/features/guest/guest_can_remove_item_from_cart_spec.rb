@@ -10,7 +10,7 @@ RSpec.describe "guest can remove item from cart" do
     click_on "Cart"
 
     expect(page).to have_content("Red Potion")
-    click_on "Remove"
+    click_on ""
     expect(page).to have_content("Succesfully Removed #{item.name} from cart")
     expect(page).to_not have_content("5")
     click_on "#{item.name}"

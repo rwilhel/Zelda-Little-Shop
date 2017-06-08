@@ -10,9 +10,9 @@ RSpec.describe "guest can't check out" do
 
     click_on "Cart"
 
-    expect(page).to_not have_link("Checkout")
+
     expect(page).to have_content("Login")
-    expect(page).to have_content("Create Account")
+    expect(page).to have_content("Create Account to Checkout")
   end
 
   it "cart persists after creating an account or logging in" do

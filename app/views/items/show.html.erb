@@ -11,7 +11,7 @@
           <%= image_tag @item.avatar.url %><br>
           <li class="list-group-item"><strong>Description:</strong><%= @item.description %></li>
           <li class="list-group-item"><strong>Price:</strong><%= @item.price %> Rupees</li>
-          <li class="list-group-item"><strong>In Stock?</strong><%= @status %></li>
+          <li class="list-group-item"><strong>In Stock? </strong><%= @status %></li>
           <% if @item.retired_item? == false %>
             <%= button_to "Add #{@item.name} to Cart", cart_path(item_id: @item.id), class: "btn btn-success btn-xs" %><br>
           <% end %>
