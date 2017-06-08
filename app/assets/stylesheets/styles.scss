@@ -19,6 +19,8 @@ a {
 nav.navbar.navbar-default.navbar-fixed-top {
     background-color: #0d9263;
     margin-bottom: auto;
+    font-family: "Triforce";
+    font-size: 30px;
 }
 
 nav.navbar-default .navbar-nav > li > a {
@@ -33,6 +35,14 @@ nav.navbar-default .navbar-nav > li > a {
 
 nav.navbar-default .navbar-brand {
     color: white;
+    font-family: "Triforce";
+    font-size: 25px;
+}
+
+a.navbar-brand.navbar-left.logo {
+    color: white;
+    font-family: "Triforce";
+    font-size: 35px;
 }
 
 div.session {
