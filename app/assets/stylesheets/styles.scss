@@ -119,115 +119,89 @@ div.page-header h2 {
 /******* CART  ********/
 
 div.session {
-    color: whitesmoke;
+  color: whitesmoke;
 }
+
 table#cart {
-    background-color: whitesmoke;
+  background-color: whitesmoke;
 }
 
 div.button_plus {
   width: 5%;
 }
 
+/******* ALL ITEMS  ********/
+
+.container-items {
+  padding-top: 35px;
+}
+
+.container-items h1 {
+  font-size: 60px;
+  font-family: "Triforce";
+  text-shadow: 4px 4px 20px #000000;
+  color: #FFFFFF;
+  text-align: center;
+}
+
 #card-list {
-
-
   font-family: arial;
-
   width: 100%;
-
   display: -webkit-flex;
-
   display: -ms-flexbox;
-
   display: flex;
-
   -webkit-flex-wrap: wrap;
-
   -ms-flex-wrap: wrap;
-
   flex-wrap: wrap;
 
   .items {
-
     float: left;
-
-    width: 30%;
-
-    border: 1px solid #ccc;
-
+    width: 20%;
+    // border: 1px solid #ccc;
     display: -webkit-flex;
-
     display: -ms-flexbox;
-
     display: flex;
-
-    margin-left: 1.75438%;
-
+    margin-left: 0;
     overflow: hidden;
+    justify-content: center;
+    padding-top: 2%;
 
     &:first-child {
-
       margin-left: 0;
-
     }
 
-
-
-    figure{
-
+    figure {
       width: auto;
-
       height: 200px;
-
       padding: 0;
-
       margin: 0;
-
       display: block;
 
-      img{
-
-        width: 100%;
-
-        height: auto;
-
+      img.product {
+        margin-left: 20%;
       }
 
       figcaption{
-
         padding: 10px;
-
         margin: 0;
-
         display: block;
-
+        text-align: center;
       }
-
     }
-
   }
-
 }
 
 #card-list a{
-
   color: whitesmoke;
-
 }
 
 #card-list a:hover {
-
   color: #8a6d3b;
-
   text-decoration: none;
-
 }
 
 #card-list p {
-
   color: whitesmoke;
-
 }
 
 #card-list .items figure img {
