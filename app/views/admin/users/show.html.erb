@@ -4,15 +4,12 @@
 </div>
 </div>
 <div class="container">
-  
+
   <%= link_to "All Orders", admin_orders_path %>
   <%= link_to "All Items", admin_items_path %>
   <%= link_to "Create Item", new_admin_item_path %>
 
-  <h2>Profile Info:</h2>
-
   <h3>Username: <%= @user.username %> </h3>
   <h4>Orders Placed: <%= @orders %> </h4>
-  <h4>Money Spent at Store:  </h4>
 
 </div>

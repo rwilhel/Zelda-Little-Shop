@@ -255,7 +255,7 @@ I can create an item.
 - The title and description cannot be empty.
 - The title must be unique for all items in the system.
 - The price must be a valid decimal numeric value and greater than zero. -->
-- The photo is optional. If not present, a stand-in photo is used. **(PAPERCLIP)**
+<!-- - The photo is optional. If not present, a stand-in photo is used. **(PAPERCLIP)** -->
 
 <!-- ## Story 24: Admin Viewing items
 
@@ -279,5 +279,5 @@ Background: an existing item
 As an admin
 When I visit "admin/items"
 And I click "Edit" -->
-Then my current path should be "/admin/items/:ITEM_ID/edit"
+<!-- Then my current path should be "/admin/items/:ITEM_ID/edit" -->
 And I should be able to update title, description, image, and status

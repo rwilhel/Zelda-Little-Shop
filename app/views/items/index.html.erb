@@ -1,14 +1,23 @@
-<div class="page-header">
 <div class="container">
-  <h1>All Items</h1>
+  <div class="page-header items">
+      <h1>All Items</h1>
+    </div>
+  </div>
+</div>
+<div id="card-list">
+    <% @items.each do |item| %>
+      <div class="items">
+        <figure>
+          <%= image_tag item.avatar.url(:medium) %><br>
+        </figure>
+        <%= link_to item.name, item_path(item) %><br>
+        <figcaption>
+          <p>Price: <%= item.price %> Rupees</p>
+          <% if item.retired_item? == false %>
+            <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-success btn-xs" %>
+          <% end %>
+        </figcaption>
+      </div>
+    <% end %>
 </div>
 
-</div>
-<div class="container">
-  <% @items.each do |item| %>
-    <%= link_to item.name, item_path(item) %>
-    <% if item.retired_item? == false %>
-      <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-danger btn-xs" %>
-    <% end %>
-  <% end %>
-</div>

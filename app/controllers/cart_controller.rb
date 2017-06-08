@@ -1,6 +1,8 @@
 class CartController < ApplicationController
   include ActionView::Helpers::TextHelper
 
+  #create before action for @item
+
   def create
     @item = Item.find(params[:item_id])
     @cart.add_item(@item.id)
@@ -12,6 +14,7 @@ class CartController < ApplicationController
   def show
     @cart = session[:cart]
     staged_cart = Cart.new(@cart)
+    @status = staged_cart.valid
     @total = staged_cart.total
   end
 

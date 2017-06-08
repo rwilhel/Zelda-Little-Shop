@@ -30,6 +30,8 @@ RSpec.describe "admin can edit items" do
     fill_in "Price", with: ""
     fill_in "Price", with: 35
     select 'Food', from: 'item[category_id]'
+    find_by_id("item_avatar")
+
     click_on "Update Item"
 
     expect(page).to have_content(35)

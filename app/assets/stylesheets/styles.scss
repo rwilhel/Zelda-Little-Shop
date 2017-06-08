@@ -1,0 +1,190 @@
+@font-face {
+    font-family: "Triforce";
+    src: url(/assets/Triforce.ttf) format("truetype");
+}
+
+/******* BASIC ********/
+
+body {
+ background: url("dark_green_wallpaper.png");
+ font-family: "Triforce";
+}
+
+/******* NAV BAR********/
+
+nav.navbar.navbar-default.navbar-fixed-top {
+    background-color: #0d9263;
+    margin-bottom: auto;
+}
+
+nav.navbar-default .navbar-nav > li > a {
+    color: whitesmoke;
+}
+.item-container {
+  margin-top: 7%
+}
+.patron-profile {
+  margin-top: 7%;
+}
+
+nav.navbar-default .navbar-brand {
+    color: white;
+}
+
+div.session {
+    margin-top: 10%;
+}
+
+p.navbar-text.navbar-left {
+    color: whitesmoke;
+}
+
+/******* CATEGORIES ICONS  ********/
+
+div.thumbnail {
+    border: none;
+}
+
+div.caption {
+    text-align: center;
+    font-family: Triforce;
+}
+div.caption h3 {
+    color: whitesmoke;
+    text-shadow: 2px 2px 10px #000000;
+}
+div.thumbnail {
+    background-color: transparent;
+}
+
+div.thumbnail img {
+    width: 50%;
+}
+
+div.page-header h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Triforce;
+    color: whitesmoke;
+    font-size: 40px;
+    text-shadow: 4px 4px 20px #000000;
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.category {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+}
+
+/*******ITEMS JUMBOTRON********/
+
+.jumbolink a {
+  text-decoration: none !important;
+}
+
+.jumbotron {
+  background-image: url('/assets/goron-shop.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background: contain;
+  margin: auto;
+  max-width: 1000px;
+  height: 300px;
+  box-shadow: 0px 0px 3px 5px #f2e1f2;
+  margin-top: 10%;
+}
+
+.caption h2 {
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  padding-top: 7%;
+  font-family: Triforce;
+  text-shadow: 4px 4px 20px #000000;
+}
+
+
+/******* CART  ********/
+
+div.session {
+    color: whitesmoke;
+}
+table#cart {
+    background-color: whitesmoke;
+}
+
+div.button_plus {
+  width: 5%;
+}
+
+/******* ITEMS INDEX PAGE  ********/
+
+#card-list {
+  font-family: arial;
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  .items {
+    float: left;
+    width: 30%;
+    border: 1px solid #ccc;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 1.75438%;
+    overflow: hidden;
+    &:first-child {
+      margin-left: 0;
+    }
+    figure{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      display: block;
+      img{
+        width: 100%;
+        height: auto;
+      }
+      figcaption{
+        padding: 10px;
+        margin: 0;
+        display: block;
+      }
+    }
+  }
+}
+
+#card-list a{
+  color: whitesmoke;
+}
+
+
+#card-list a:hover {
+  color: #8a6d3b;
+  text-decoration: none;
+}
+
+
+#card-list p {
+  color: whitesmoke;
+}
+
+/******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
+
+.patron-profile {
+    color: whitesmoke;
+}

@@ -35,4 +35,23 @@ class Cart
     total.reduce(:+)
   end
 
+  def valid
+    if contents == {}
+      false
+    end
+  end
+
+  def total_spent
+    total = []
+    contents.each do |order|
+      items = OrdersItem.where(order_id: order.id)
+      items.each do |item|
+        i = Item.find(item.item_id).price
+        item_price = (i * item.quantity)
+        total << item_price
+      end
+    end
+    total.reduce(:+)
+  end
+
 end

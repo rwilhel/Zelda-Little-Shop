@@ -31,7 +31,7 @@ RSpec.describe "only an admin can visit admin/dashboard" do
     expect(current_path).to eq(admin_user_path(admin))
     expect(page).to have_link("All Orders")
     expect(page).to have_link("All Items")
-    expect(page).to have_link("Create Items")
+    expect(page).to have_link("Create Item")
   end
 
   it "admin can view and delete orders" do

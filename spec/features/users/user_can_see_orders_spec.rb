@@ -10,11 +10,12 @@ require "rails_helper"
 
 RSpec.describe "user can see past, present and future orders" do
   it "can see into the past" do
-    user = create(:user)
-    category = Category.create(name: "Potions")
-    item1 = Item.create(name: "Red Potion", description: "Feeds the body", price: 2, category_id: category.id)
-    item2 = Item.create(name: "Blue Potion", description: "Feeds the body", price: 2, category_id: category.id)
-    item3 = Item.create(name: "Yellow Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    user = User.create!(username: "Linkss", password: "password")
+    category = Category.create!(name: "Potions")
+    item1 = Item.create!(name: "Red Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    item2 = Item.create!(name: "Blue Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    item3 = Item.create!(name: "Yellow Potion", description: "Feeds the body", price: 2, category_id: category.id)
+    order1 = Order.create(user_id: user.id)
 
     visit root_path
 
@@ -23,17 +24,16 @@ RSpec.describe "user can see past, present and future orders" do
     fill_in 'Password', with: 'password'
     click_on 'Login'
 
-    click_on "All Items"
+    click_on "Items"
 
     click_on "Add #{item1.name} to Cart"
     click_on "Add #{item1.name} to Cart"
     click_on "Add #{item2.name} to Cart"
     click_on "Add #{item3.name} to Cart"
 
-    click_on 'Cart'
-    click_on 'Checkout'
+    visit 'patron/orders'
     expect(current_path).to eq('/patron/orders')
-    expect(page).to have_content("Order: 1")
+    expect(page).to have_content("Order: #{order1.id}")
 
   end
 
@@ -92,7 +92,7 @@ RSpec.describe "user can see past, present and future orders" do
 
     click_on "Order: #{order1.id}"
 
-    expect(current_path).to eq('/patron/orders/5')
+    expect(current_path).to eq("/patron/orders/#{order1.id}")
     expect(page).to have_content("Total: 70")
     expect(page).to have_content("Red Potion")
     expect(page).to have_content("Blue Potion")

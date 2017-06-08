@@ -1,0 +1,19 @@
+<div class="page-header">
+  <div class="container">
+    <h1>Edit: <%= @user.username %>'s Profile </h1>
+  </div>
+</div>
+
+<%= form_for [:patron, @user] do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username%>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location %>
+
+  <%= f.submit %>
+<% end %>

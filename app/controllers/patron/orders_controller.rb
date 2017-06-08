@@ -1,14 +1,17 @@
 class Patron::OrdersController < Patron::BaseController
 
   def index
-    @orders = Order.where(user_id: current_user.id)
+    @open_orders = Order.where(user_id: current_user.id, status: "Ordered")
+    @closed_orders = Order.where(user_id: current_user.id, status: "Completed")
   end
 
   def new
     @order = Order.new(user_id: current_user.id)
     if @order.save
+      # replicate save method with your own method. Possible refactor.
       create_join_table_entries(@order)
       flash[:order_success] = "Order was successfully placed"
+      session[:cart] = nil
       redirect_to patron_orders_path
     else
       flash[:cart_error] = "Order could not be placed."
