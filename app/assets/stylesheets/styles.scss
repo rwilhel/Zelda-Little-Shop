@@ -86,7 +86,6 @@ div.page-header h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
 }
 
 /*******ITEMS JUMBOTRON********/
@@ -130,65 +129,130 @@ div.button_plus {
   width: 5%;
 }
 
-/******* ITEMS INDEX PAGE  ********/
-
 #card-list {
+
+
   font-family: arial;
+
   width: 100%;
+
   display: -webkit-flex;
+
   display: -ms-flexbox;
+
   display: flex;
 
   -webkit-flex-wrap: wrap;
+
   -ms-flex-wrap: wrap;
+
   flex-wrap: wrap;
+
   .items {
+
     float: left;
+
     width: 30%;
+
     border: 1px solid #ccc;
+
     display: -webkit-flex;
+
     display: -ms-flexbox;
+
     display: flex;
+
     margin-left: 1.75438%;
+
     overflow: hidden;
+
     &:first-child {
+
       margin-left: 0;
+
     }
+
+
+
     figure{
-      width: 100%;
+
+      width: auto;
+
+      height: 200px;
+
       padding: 0;
+
       margin: 0;
+
       display: block;
+
       img{
+
         width: 100%;
+
         height: auto;
+
       }
+
       figcaption{
+
         padding: 10px;
+
         margin: 0;
+
         display: block;
+
       }
+
     }
+
   }
+
 }
 
 #card-list a{
-  color: whitesmoke;
-}
 
+  color: whitesmoke;
+
+}
 
 #card-list a:hover {
+
   color: #8a6d3b;
+
   text-decoration: none;
+
 }
 
-
 #card-list p {
+
   color: whitesmoke;
+
+}
+
+#card-list .items figure img {
+    width: auto;
+    height: 100px;
 }
 
 /******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
 
-.patron-profile {
-    color: whitesmoke;
+
+/******* ACCOUNT PROFILE PAGE  ********/
+
+.list-group-item {
+  color: #666666;
+}
+
+.patron-profile a {
+  margin-bottom: 2%;
+}
+
+
+.patron-profile .edit a {
+  margin-top: 2%;
+}
+
+.btn-success {
+  margin-top: 2% ;
 }

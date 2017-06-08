@@ -236,9 +236,9 @@ And I have links to transition between statuses
 <!-- ## Story 22: Admin views an individual Order
 
 As an authenticated Admin, when I visit an individual order page
-Then I can see the order's date and time.
+Then I can see the order's date and time. -->
 And I can see the purchaser's full name and address.
-And I can see, for each item on the order:
+<!-- And I can see, for each item on the order:
   - The item's name, which is linked to the item page.
   - Quantity in this order.
   - Price

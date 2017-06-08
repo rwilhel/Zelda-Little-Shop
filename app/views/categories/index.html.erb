@@ -8,7 +8,7 @@
       <div class="category">
         <a href="<%= category_path(category) %>">
           <div class="thumbnail">
-            <img src="/assets/<%="#{category.slug}"%>_icon.png" alt="general goods icon">
+            <img src="/assets/<%="#{category.slug}"%>_icon.png" alt="<%= category.slug %> icon">
             <div class="caption">
               <h3><%= category.name %></h3>
             </div>
@@ -17,5 +17,3 @@
       </div>
   <% end %>
 </div>
-
-
