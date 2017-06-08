@@ -12,7 +12,7 @@ def create_categories
 end
 
 def create_items_for_category_potions
-  id = Category.find_by(name: "Potions").id,
+  id = Category.find_by(name: "Potions").id
   Item.create(name: "Red Potion",
               description: "Heals the body. Restores 10 Hearts.",
               price: 10,
@@ -64,7 +64,7 @@ def create_items_for_category_potions
 end
 
 def create_items_for_category_special_items
-  id = Category.find_by(name: "Special Items").id,
+  id = Category.find_by(name: "Special Items").id
   Item.create(name: "Midnas Helmet",
               description: "The physical manifestation of extremely powerful Shadow magic created by an 'ancient race'.",
               price: 750,
@@ -94,7 +94,7 @@ def create_items_for_category_special_items
 end
 
 def create_items_for_category_storage
-  id = Category.find_by(name: "Storage").id,
+  id = Category.find_by(name: "Storage").id
   Item.create(name: "Bomb Bag",
               description: "Can carry up to 10 bombs.",
               price: 100,
@@ -148,7 +148,7 @@ def create_items_for_category_storage
 end
 
 def create_items_for_category_munitions
-  id = Category.find_by(name: "Munitions").id,
+  id = Category.find_by(name: "Munitions").id
   Item.create(name: "Bombs",
               description: "A pack of 5 Bombs",
               price: 15,
@@ -179,7 +179,7 @@ def create_items_for_category_munitions
               price: 75,
               avatar: File.new("app/assets/images/icon-munitions-4.png"),
               show: "http://i.imgur.com/MtyPwUI.png")
-              
+
   Item.create(name: "Light Arrows",
               description: "A set of 3 Light Arrows. Enchanted with the power of light. Can vanquish evil.",
               price: 250,
@@ -191,7 +191,7 @@ def create_items_for_category_munitions
 end
 
 def create_items_for_category_equipment
-  id = Category.find_by(name: "Equipment").id,
+  id = Category.find_by(name: "Equipment").id
   Item.create(name: "Boomerang",
               description: "Used to stun enemies, retrieve items,
               and trigger switches. Some weak enemies can be killed with it.",
@@ -228,7 +228,7 @@ def create_items_for_category_equipment
 end
 
 def create_items_for_category_key_items
-  id = Category.find_by(name: "Key Items").id,
+  id = Category.find_by(name: "Key Items").id
   Item.create(name: "Compass",
               description: "This device allows you to see the locations of Treasure Chests and dungeon boss rooms along with your current position on the map.",
               price: 250,
