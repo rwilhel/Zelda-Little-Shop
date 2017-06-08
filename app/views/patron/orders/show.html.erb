@@ -3,7 +3,7 @@
     <h1>Order: <%= @order.id %> </h1>
   </div>
 </div>
-<div class="container">
+<div class="container order-show">
   <h2>Order Date: <%= @order.created_at %></h2>
   <h2>Order Status: <%= @order.status %></h2>
 
@@ -13,7 +13,7 @@
     <% item = Item.find(oi.item_id)  %>
     <%= image_tag item.avatar.url %><br>
     Name: <%= item.name  %><br>
-    Quantity:<%= oi.quantity %><br>
+    Quantity: <%= oi.quantity %><br>
     <% subtotal = (item.price) * oi.quantity %>
     <% total << subtotal  %>
     Subtotal: <%= subtotal %><br>

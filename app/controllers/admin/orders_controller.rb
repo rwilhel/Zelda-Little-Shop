@@ -12,6 +12,7 @@ class Admin::OrdersController < Admin::BaseController
 
   def destroy
     @order = Order.find(params[:id])
+    delete_order_items(OrdersItem.where(order_id: @order.id))
     @order.destroy
 
     redirect_to request.referrer
@@ -27,5 +28,11 @@ class Admin::OrdersController < Admin::BaseController
 
   def order_params
     params.require(:order).permit(:id, :status)
+  end
+
+  def delete_order_items(order_items)
+    order_items.each do |order_item|
+      order_item.destroy
+    end
   end
 end
