@@ -4,14 +4,22 @@
 </div>
 </div>
 
-<div class="container">
+<div id="card-list">
   <% @items.each do |item| %>
-  <%= image_tag item.avatar.url(:medium) %><br>
-    <%= link_to item.name, item_path(item) %><br>
-    Price: <%= item.price %> Rupees <br>
-    <% if item.retired_item? == false %>
-      <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-danger btn-xs" %>
-    <% end %>
-    <%= link_to "Edit", edit_admin_item_path(item), class: "btn btn-danger btn-xs" %>
+      <div class="items">
+        <figure>
+          <%= image_tag item.avatar.url(:medium), class: "product" %>
+          <figcaption>
+            <%= link_to item.name, item_path(item) %>
+            <p>Price: <%= item.price %> Rupees</p>
+            <% if item.retired_item? == false %>
+                <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-success btn-xs" %>
+            <% end %>
+            <%= link_to "Edit", edit_admin_item_path(item), class: "btn btn-danger btn-xs" %>
+          </figcaption>
+        </figure>
+        <br>
+        <br>
+      </div>
   <% end %>
 </div>
