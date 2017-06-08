@@ -156,34 +156,36 @@ div.button_plus {
 
   .items {
     float: left;
-    width: 30%;
-    border: 1px solid #ccc;
+    width: 20%;
+    // border: 1px solid #ccc;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin-left: 1.75438%;
+    margin-left: 0;
     overflow: hidden;
+    justify-content: center;
+    padding-top: 2%;
 
     &:first-child {
-      margin-left: 1.75438%;
+      margin-left: 0;
     }
 
-    figure{
+    figure {
       width: auto;
       height: 200px;
       padding: 0;
       margin: 0;
       display: block;
 
-      img{
-        width: 100%;
-        height: auto;
+      img.product {
+        margin-left: 20%;
       }
 
       figcaption{
         padding: 10px;
         margin: 0;
         display: block;
+        text-align: center;
       }
     }
   }

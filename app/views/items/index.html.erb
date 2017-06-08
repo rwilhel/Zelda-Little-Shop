@@ -7,17 +7,17 @@
     <% @items.each do |item| %>
       <div class="items">
         <figure>
-          <%= image_tag item.avatar.url(:medium) %>
+          <%= image_tag item.avatar.url(:medium), class: "product" %>
+          <figcaption>
+            <%= link_to item.name, item_path(item) %>
+            <p>Price: <%= item.price %> Rupees</p>
+            <% if item.retired_item? == false %>
+            <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-success btn-xs" %>
+            <% end %>
+          </figcaption>
         </figure>
         <br>
-        <%= link_to item.name, item_path(item) %>
         <br>
-        <figcaption>
-          <p>Price: <%= item.price %> Rupees</p>
-          <% if item.retired_item? == false %>
-            <%= button_to "Add #{item.name} to Cart", cart_path(item_id: item.id), class: "btn btn-success btn-xs" %>
-          <% end %>
-        </figcaption>
       </div>
     <% end %>
 </div>
