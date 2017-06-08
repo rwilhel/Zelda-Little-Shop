@@ -172,9 +172,13 @@ div.button_plus {
 
     }
 
+
+
     figure{
 
-      width: 100%;
+      width: auto;
+
+      height: 200px;
 
       padding: 0;
 
@@ -224,6 +228,11 @@ div.button_plus {
 
   color: whitesmoke;
 
+}
+
+#card-list .items figure img {
+    width: auto;
+    height: 100px;
 }
 
 /******* USERS ACCOUNT INFORMATION (USERS SHOW PG  ********/
