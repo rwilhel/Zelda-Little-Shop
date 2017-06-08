@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 20170601223404) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
-    t.string "description"
+    t.text "description"
     t.integer "price"
     t.string "slug"
+    t.string "show"
     t.boolean "status", default: true
     t.string "avatar_file_name"
     t.string "avatar_content_type"
