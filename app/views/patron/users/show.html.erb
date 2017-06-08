@@ -9,14 +9,14 @@
       <div class="col-sm-10 col-sm-offset-2">
         <div class="list-group">
           <ul class="col-md-8 list-unstyled">
-            <%= link_to "Orders", patron_orders_path, class: 'btn btn-success' %>
+            <%= link_to "Orders", patron_orders_path, class: 'btn btn-success orders' %>
 
-            <li class="list-group-item"><strong>Username:</strong><%= @user.username  %></li>
-            <li class="list-group-item"><strong>Location::</strong><%= @user.location %></li>
-            <li class="list-group-item"><strong>Orders Placed:</strong><%= @orders %></li>
-            <li class="list-group-item"><strong>Money Spent at Store::</strong><%= @total %></li>
+            <li class="list-group-item"><strong>Username: </strong><%= @user.username  %></li>
+            <li class="list-group-item"><strong>Location: </strong><%= @user.location %></li>
+            <li class="list-group-item"><strong>Orders Placed: </strong><%= @orders %></li>
+            <li class="list-group-item"><strong>Money Spent at Store: </strong><%= @total %></li>
 
-            <%= link_to "Edit Profile", edit_patron_user_path(@user), class: 'btn btn-success' %>
+            <%= link_to "Edit Profile", edit_patron_user_path(@user), class: 'btn btn-success edit' %>
           </ul>
         </div>
       </div>
