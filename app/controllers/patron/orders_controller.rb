@@ -8,7 +8,7 @@ class Patron::OrdersController < Patron::BaseController
   def new
     @order = Order.new(user_id: current_user.id)
     if @order.save
-      # replicate save method with your own method. Possible refactor.
+      # replicate save method with own method. Possible refactor.
       create_join_table_entries(@order)
       flash[:order_success] = "Order was successfully placed"
       session[:cart] = nil
