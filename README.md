@@ -23,7 +23,7 @@ Admins have the added ability to:
 
 The live version of the site can be found at: https://nameless-sands-53448.herokuapp.com
 
-# More Pictures
+### More Pictures
 
 ![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/categories_screenshot.jpeg "categories")
 ![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/items_screenshot.jpeg "items")
