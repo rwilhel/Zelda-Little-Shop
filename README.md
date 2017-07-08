@@ -1,6 +1,9 @@
-### Little Shop
+### Zelda's Little Shop
 
 An e-commerce site, serving the residents of Hyrule (Zelda reference) with all the best potions and equipment. 
+
+![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/home_page_screenshot.jpeg "homepage")
+
 
 Users have all the base functionality they would expect from an online merchandise shop:
 
@@ -19,3 +22,10 @@ Admins have the added ability to:
 + View usage statistics
 
 The live version of the site can be found at: https://nameless-sands-53448.herokuapp.com
+
+# More Pictures
+
+![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/categories_screenshot.jpeg "categories")
+![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/items_screenshot.jpeg "items")
+
+
