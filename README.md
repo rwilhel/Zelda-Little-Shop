@@ -21,11 +21,23 @@ Admins have the added ability to:
 + Complete orders
 + View usage statistics
 
-The live version of the site can be found at: https://nameless-sands-53448.herokuapp.com
+The live version of the site can be found at: https://fast-reaches-42091.herokuapp.com/
 
 ### More Pictures
 
 ![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/categories_screenshot.jpeg "categories")
 ![alt text](https://github.com/ACC25/Zelda-Little-Shop/blob/master/items_screenshot.jpeg "items")
 
+### Install Locally
+
+To run the application locally, fork and clone this repository: https://github.com/rwilhel/Zelda-Little-Shop.git
+
+```
+cd Zelda-Little-Shop
+bundle install
+rake db:setup
+rake db:seed
+rails server
+```
+Navigate to ```localhost:3000```
 
